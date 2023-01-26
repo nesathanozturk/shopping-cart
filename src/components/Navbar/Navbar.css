@@ -12,6 +12,7 @@ nav img {
 
 nav ul {
   display: flex;
+  margin-top: 10px;
 }
 
 nav .link {
