@@ -7,7 +7,9 @@ function Navbar() {
   return (
     <header>
       <nav>
-        <img src={shopping} alt="Shopping Cart Logo" />
+        <NavLink className="link" to="/">
+          <img src={shopping} alt="Shopping Cart Logo" />
+        </NavLink>
         <ul>
           <li>
             <NavLink className="link" to="/">

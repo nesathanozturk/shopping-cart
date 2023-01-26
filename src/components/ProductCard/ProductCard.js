@@ -1,6 +1,5 @@
 import React from "react";
-import { MdOutlineAddShoppingCart } from "react-icons/md";
-import "./Card.css";
+import "./ProductCard.css";
 
 function Card({ product }) {
   const { name, price, image } = product;
