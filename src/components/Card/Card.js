@@ -1,4 +1,5 @@
 import React from "react";
+import { MdOutlineAddShoppingCart } from "react-icons/md";
 import "./Card.css";
 
 function Card({ product }) {
@@ -22,7 +23,9 @@ function Card({ product }) {
           <div class="price">
             <h3>{price} &#8378;</h3>
           </div>
-          <a>Add to basket</a>
+          <a>
+            Add to basket <MdOutlineAddShoppingCart className="add-icon" />
+          </a>
         </div>
       </div>
     </div>
