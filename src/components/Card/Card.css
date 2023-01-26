@@ -140,25 +140,10 @@
   background: #9bdc28;
 }
 
-.container .card .content .color span {
-  width: 20px;
-  height: 20px;
-  background: #ff0;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.container .card .content .color span:nth-child(2) {
-  background: #9bdc28;
-}
-
-.container .card .content .color span:nth-child(3) {
-  background: #03a9f4;
-}
-
-.container .card .content .color span:nth-child(4) {
-  background: #e91e63;
+.container .card .content .price h3 {
+  color: #fff;
+  padding: 0.4rem;
+  text-align: center;
 }
 
 .container .card .content a {
