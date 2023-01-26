@@ -23,9 +23,7 @@ function Card({ product }) {
           <div class="price">
             <h3>{price} &#8378;</h3>
           </div>
-          <a>
-            Add to basket <MdOutlineAddShoppingCart className="add-icon" />
-          </a>
+          <button>Add to basket</button>
         </div>
       </div>
     </div>

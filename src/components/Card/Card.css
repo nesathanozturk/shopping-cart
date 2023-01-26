@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.container .card {
+.card {
   position: relative;
   width: 320px;
   height: 450px;
@@ -12,7 +12,7 @@
   cursor: pointer;
 }
 
-.container .card:before {
+.card:before {
   content: "";
   position: absolute;
   top: 0;
@@ -24,12 +24,12 @@
   transition: 0.5s ease-in-out;
 }
 
-.container .card:hover:before {
+.card:hover:before {
   clip-path: circle(300px at 80% -20%);
 }
 
-.container .card:after {
-  content: "Nike";
+.card:after {
+  content: "";
   position: absolute;
   top: 30%;
   left: -20%;
@@ -49,12 +49,12 @@
   transition: 0.5s;
 }
 
-.container .card:hover .image {
+.card:hover .image {
   top: 0%;
   transform: translateY(0%);
 }
 
-.container .card .image img {
+.image img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,7 +62,7 @@
   width: 270px;
 }
 
-.container .card .content {
+.content {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -72,20 +72,20 @@
   z-index: 10;
 }
 
-.container .card:hover .content {
+.card:hover .content {
   height: 210px;
 }
 
-.container .card .content h2 {
+.card .content h2 {
   position: relative;
   font-weight: 600;
   letter-spacing: 1px;
   color: #fff;
-  margin: 0;
+  margin: 1.2rem 0 0 0;
 }
 
-.container .card .content .size,
-.container .card .content .color {
+.size,
+.price {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,20 +98,19 @@
   margin: 1rem 0;
 }
 
-.container .card:hover .content .size {
+.card:hover .content .size {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.5s;
 }
 
-.container .card:hover .content .color {
+.card:hover .content .price {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.6s;
 }
 
-.container .card .content .size h3,
-.container .card .content .color h3 {
+.size h3 {
   color: #fff;
   font-weight: 300;
   font-size: 14px;
@@ -120,7 +119,7 @@
   margin-right: 10px;
 }
 
-.container .card .content .size span {
+.size span {
   width: 26px;
   height: 26px;
   text-align: center;
@@ -136,39 +135,33 @@
   cursor: pointer;
 }
 
-.container .card .content .size span:hover {
+.size span:hover {
   background: #9bdc28;
 }
 
-.container .card .content .price h3 {
+.price h3 {
   color: #fff;
-  padding: 0.4rem;
-  text-align: center;
+  font-size: 20px;
 }
 
-.container .card .content a {
+.content button {
   display: inline-block;
   padding: 10px 20px;
-  background: #fff;
+  background: #2e3030;
   border-radius: 4px;
-  margin-top: 15px;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
   font-weight: 600;
-  color: #111;
+  color: #fff;
   opacity: 0;
   transform: translateY(50px);
   transition: 0.5s;
   margin-top: 0;
 }
 
-.container .card:hover .content a {
+.card:hover .content button {
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;
-}
-
-.add-icon {
-  font-size: 1.5rem;
-  line-height: 0.4rem;
-  margin-left: 0.6rem;
 }
