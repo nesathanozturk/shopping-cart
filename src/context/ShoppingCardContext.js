@@ -4,6 +4,7 @@ const ShoppingCart = createContext();
 
 function Provider({ children }) {
   const [basketItems, setBasketItems] = useState([]);
+  const [price, setPrice] = useState(0);
 
   const handleChange = (product, d) => {
     const ind = basketItems.indexOf(product);
@@ -13,6 +14,18 @@ function Provider({ children }) {
     if (arr[ind].amount === 0) arr[ind].amount = 1;
     setBasketItems([...arr]);
   };
+
+  const handlePrice = () => {
+    let productPrice = 0;
+    basketItems.map(
+      (product) => (productPrice += product.amount * product.price)
+    );
+    setPrice(productPrice);
+  };
+
+  useEffect(() => {
+    handlePrice();
+  });
 
   const addItemAtBasket = (product) => {
     const updatedBasketItems = [...basketItems, product];
@@ -28,6 +41,11 @@ function Provider({ children }) {
 
   const valueToShare = {
     basketItems,
+    setBasketItems,
+    price,
+    setPrice,
+    handleChange,
+    handlePrice,
     addItemAtBasket,
     removeItemAtBasket,
   };

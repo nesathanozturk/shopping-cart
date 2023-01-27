@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import useShoppingCartContext from "../../hooks/use-shopping-cart";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
-  const [basketItems, setBasketItems] = useState([]);
-
-  const addItemAtBasket = (product) => {
-    const updatedBasketItems = [...basketItems, product];
-    setBasketItems(updatedBasketItems);
-  };
+  const { addItemAtBasket } = useShoppingCartContext();
 
   return (
     <div class="container">
