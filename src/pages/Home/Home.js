@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <main>
-      <Navbar />
+      <Navbar size={cart.length} />
       <Card addItemAtBasket={addItemAtBasket} />
       <Products cart={cart} setCart={setCart} />
     </main>

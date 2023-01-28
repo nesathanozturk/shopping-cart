@@ -1,24 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ size }) {
   return (
     <header>
       <nav>
-        <NavLink className="link" to="/">
-          <h1>Sport Shopping</h1>
-        </NavLink>
+        <h1>Sport Shopping</h1>
         <ul>
           <li>
-            <NavLink className="link" to="/">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="link" to="/products">
-              Products
-            </NavLink>
+            <FaShoppingCart className="icon" />
+            <span>{size}</span>
           </li>
         </ul>
       </nav>
