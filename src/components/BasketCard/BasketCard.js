@@ -43,14 +43,14 @@ function BasketCard({ cart, setCart }) {
             <p>{product.name}</p>
             <div className="product-ar">
               <button
-                className="increase-amount"
+                className="increaseBtn"
                 onClick={() => handleChangeAmount(product, 1)}
               >
                 <CgAdd />
               </button>
-              <span className="amount">{product.amount}</span>
+              <span className="product-amount">{product.amount}</span>
               <button
-                className="decrease-amount"
+                className="decreaseBtn"
                 onClick={() => handleChangeAmount(product, -1)}
               >
                 <CiCircleRemove />
@@ -58,7 +58,7 @@ function BasketCard({ cart, setCart }) {
             </div>
             <span className="product-price">{product.price} &#8378;</span>
             <button
-              className="remove-item"
+              className="removeBtn"
               onClick={() => removeItemAtBasket(product.id)}
             >
               <BiTrash />

@@ -44,7 +44,7 @@
   display: flex;
 }
 
-.product-info .amount {
+.product-amount {
   font-size: 30px;
   color: #fff;
   font-weight: bold;
@@ -61,7 +61,7 @@
   margin-top: 10px;
 }
 
-.increase-amount {
+.increaseBtn {
   color: rgb(41, 155, 41);
   font-size: 40px;
   margin-right: 10px;
@@ -69,12 +69,12 @@
   transition: color 0.1s ease-in-out;
 }
 
-.increase-amount:hover {
+.increaseBtn:hover {
   color: rgb(39, 104, 39);
   text-decoration: none;
 }
 
-.decrease-amount {
+.decreaseBtn {
   color: #ff0000;
   font-size: 40px;
   margin-left: 10px;
@@ -82,11 +82,11 @@
   transition: color 0.1s ease-in-out;
 }
 
-.decrease-amount:hover {
+.decreaseBtn:hover {
   color: #cb2e2e;
 }
 
-.remove-item {
+.removeBtn {
   color: red;
   font-size: 30px;
   position: absolute;
