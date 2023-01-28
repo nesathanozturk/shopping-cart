@@ -3,12 +3,16 @@ import products from "../../config/data";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import "./Card.css";
 
-function Card() {
+function Card({ handleClick }) {
   return (
     <section>
       <div className="products">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            handleClick={handleClick}
+          />
         ))}
       </div>
     </section>

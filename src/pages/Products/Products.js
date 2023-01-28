@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import BasketCard from "../../components/BasketCard/BasketCard";
+import products from "../../config/data";
 import "./Products.css";
 
-function Products() {
+function Products({ cart, setCart, handleChange }) {
   return (
     <div>
-      <Navbar />
+      <BasketCard cart={cart} setCart={setCart} handleChange={handleChange} />
     </div>
   );
 }

@@ -28,13 +28,13 @@ function Provider({ children }) {
   });
 
   const addItemAtBasket = (product) => {
-    const updatedBasketItems = [...basketItems, product];
-    setBasketItems(updatedBasketItems);
+    if (basketItems.indexOf(product) !== -1) return;
+    setBasketItems([...basketItems, product]);
   };
 
-  const removeItemAtBasket = (product) => {
+  const removeItemAtBasket = (id) => {
     const updatedBasketItems = basketItems.filter(
-      (basketItem) => basketItem.id !== product.id
+      (basketItem) => basketItem.id !== id
     );
     setBasketItems(updatedBasketItems);
   };

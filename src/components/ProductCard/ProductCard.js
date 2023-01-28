@@ -1,10 +1,7 @@
 import React from "react";
-import useShoppingCartContext from "../../hooks/use-shopping-cart";
 import "./ProductCard.css";
 
-function ProductCard({ product }) {
-  const { addItemAtBasket } = useShoppingCartContext();
-
+function ProductCard({ product, handleClick }) {
   return (
     <div class="container">
       <div class="card">
@@ -23,9 +20,7 @@ function ProductCard({ product }) {
           <div class="price">
             <h3>{product.price} &#8378;</h3>
           </div>
-          <button onClick={() => addItemAtBasket(product)}>
-            Add to basket
-          </button>
+          <button onClick={() => handleClick(product)}>Add to basket</button>
         </div>
       </div>
     </div>
