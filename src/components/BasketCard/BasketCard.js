@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import useShoppingCardContext from "../../hooks/use-shopping-card";
 import { GoDiffAdded } from "react-icons/go";
 import { CiSquareRemove } from "react-icons/ci";
 import "./BasketCard.css";
@@ -7,7 +6,7 @@ import "./BasketCard.css";
 function BasketCard({ cart, setCart }) {
   const [price, setPrice] = useState(0);
 
-  const handleChange = (product, d) => {
+  const handleChangeAmount = (product, d) => {
     const ind = cart.indexOf(product);
     const arr = cart;
     arr[ind].amount += d;
@@ -26,8 +25,6 @@ function BasketCard({ cart, setCart }) {
     handlePrice();
   });
 
-  const removeItemAtBasket = (id) => {};
-
   return (
     <section>
       {cart.map((product) => (
@@ -38,13 +35,16 @@ function BasketCard({ cart, setCart }) {
           <div className="product-info">
             <p>{product.name}</p>
             <div className="products">
-              <button className="add" onClick={() => handleChange(product, 1)}>
+              <button
+                className="add"
+                onClick={() => handleChangeAmount(product, 1)}
+              >
                 <GoDiffAdded />
               </button>
               <span>{product.amount}</span>
               <button
                 className="remove"
-                onClick={() => handleChange(product, -1)}
+                onClick={() => handleChangeAmount(product, -1)}
               >
                 <CiSquareRemove />
               </button>

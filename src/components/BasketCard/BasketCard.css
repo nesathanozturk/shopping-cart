@@ -84,7 +84,7 @@ img {
 .total span:nth-child(1) {
   color: #fff;
   margin-top: 20px;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 2px;
 }
@@ -92,6 +92,6 @@ img {
 .total span:nth-child(2) {
   color: #fff;
   margin-top: 20px;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }

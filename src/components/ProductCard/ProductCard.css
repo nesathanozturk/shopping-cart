@@ -3,25 +3,24 @@
 }
 
 .card {
-  position: relative;
+  background: #232323;
   width: 310px;
   height: 450px;
-  background: #232323;
+  position: relative;
+  margin: 20px;
   border-radius: 20px;
   overflow: hidden;
-  cursor: pointer;
-  margin: 20px;
 }
 
 .card:before {
   content: "";
+  background: #9bdc28;
+  clip-path: circle(150px at 80% 20%);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #9bdc28;
-  clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
 }
 
@@ -34,19 +33,17 @@
   position: absolute;
   top: 30%;
   left: -20%;
-  font-size: 12em;
-  font-weight: 800;
-  font-style: italic;
   color: rgba(255, 255, 25, 0.05);
+  font: 12em 800 italic;
 }
 
 .container .card .image {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   z-index: 10000;
   width: 100%;
   height: 220px;
+  transform: translateY(-50%);
   transition: 0.5s;
 }
 
@@ -55,22 +52,22 @@
   transform: translateY(0%);
 }
 
-.image img {
+img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-25deg);
   width: 270px;
+  transform: translate(-50%, -50%) rotate(-25deg);
 }
 
 .content {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 100px;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
   text-align: center;
   transition: 1s;
-  z-index: 10;
 }
 
 .card:hover .content {
@@ -79,10 +76,10 @@
 
 .card .content h2 {
   position: relative;
+  margin: 1rem 0 0 0;
+  color: #fff;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #fff;
-  margin: 1rem 0 0 0;
 }
 
 .size,
@@ -90,50 +87,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0;
   padding: 8px 20px;
-  transition: 0.5s;
-  opacity: 0;
-  visibility: hidden;
   padding-top: 0;
   padding-bottom: 0;
-  margin: 1rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
 }
 
 .card:hover .content .size {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
   transition-delay: 0.5s;
 }
 
 .card:hover .content .price {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
   transition-delay: 0.6s;
 }
 
 .size h3 {
+  margin-right: 10px;
   color: #fff;
-  font-weight: 300;
   font-size: 14px;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-right: 10px;
 }
 
 .size span {
+  background: #fff;
+  color: #111;
+  display: inline-block;
   width: 26px;
   height: 26px;
-  text-align: center;
-  line-height: 26px;
-  font-size: 14px;
-  display: inline-block;
-  color: #111;
-  background: #fff;
   margin: 0 5px;
-  transition: 0.5s;
-  color: #111;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .size span:hover {
@@ -146,19 +142,19 @@
 }
 
 .content button {
+  background: #409513;
+  color: #fff;
   display: inline-block;
+  margin-top: 0;
   padding: 10px 20px;
-  background: #2e3030;
+  font-size: 1rem;
   border-radius: 4px;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1rem;
   font-weight: 600;
-  color: #fff;
   opacity: 0;
   transform: translateY(50px);
   transition: 0.5s;
-  margin-top: 0;
 }
 
 .card:hover .content button {
