@@ -1,25 +1,28 @@
 import { createContext, useState, useEffect } from "react";
 
-const ShoppingCart = createContext();
+const ShoppingCard = createContext();
 
 function Provider({ children }) {
-  const [basketItems, setBasketItems] = useState([]);
+  const [cart, setCart] = useState([]);
   const [price, setPrice] = useState(0);
 
-  const handleChange = (product, d) => {
-    const ind = basketItems.indexOf(product);
-    const arr = basketItems;
+  const addItemAtBasket = (product) => {
+    if (cart.indexOf(product) !== -1) return;
+    setCart([...cart, product]);
+  };
+
+  const handleChangeAmount = (product, d) => {
+    const ind = cart.indexOf(product);
+    const arr = cart;
     arr[ind].amount += d;
 
     if (arr[ind].amount === 0) arr[ind].amount = 1;
-    setBasketItems([...arr]);
+    setCart([...arr]);
   };
 
   const handlePrice = () => {
     let productPrice = 0;
-    basketItems.map(
-      (product) => (productPrice += product.amount * product.price)
-    );
+    cart.map((product) => (productPrice += product.amount * product.price));
     setPrice(productPrice);
   };
 
@@ -27,35 +30,28 @@ function Provider({ children }) {
     handlePrice();
   });
 
-  const addItemAtBasket = (product) => {
-    if (basketItems.indexOf(product) !== -1) return;
-    setBasketItems([...basketItems, product]);
-  };
-
   const removeItemAtBasket = (id) => {
-    const updatedBasketItems = basketItems.filter(
-      (basketItem) => basketItem.id !== id
-    );
-    setBasketItems(updatedBasketItems);
+    const updatedBasketItems = cart.filter((product) => product.id !== id);
+    setCart(updatedBasketItems);
   };
 
   const valueToShare = {
-    basketItems,
-    setBasketItems,
+    cart,
+    setCart,
     price,
     setPrice,
-    handleChange,
+    handleChangeAmount,
     handlePrice,
     addItemAtBasket,
     removeItemAtBasket,
   };
 
   return (
-    <ShoppingCart.Provider value={valueToShare}>
+    <ShoppingCard.Provider value={valueToShare}>
       {children}
-    </ShoppingCart.Provider>
+    </ShoppingCard.Provider>
   );
 }
 
 export { Provider };
-export default ShoppingCart;
+export default ShoppingCard;

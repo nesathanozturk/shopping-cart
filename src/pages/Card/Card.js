@@ -3,15 +3,15 @@ import products from "../../config/data";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import "./Card.css";
 
-function Card({ handleClick }) {
+function Card({ addItemAtBasket }) {
   return (
     <section>
-      <div className="products">
+      <div className="products-box ">
         {products.map((product) => (
           <ProductCard
             key={product.id}
             product={product}
-            handleClick={handleClick}
+            addItemAtBasket={addItemAtBasket}
           />
         ))}
       </div>

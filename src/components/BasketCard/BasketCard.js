@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { GoDiffAdded } from "react-icons/go";
-import { CiSquareRemove } from "react-icons/ci";
+import { CgAdd } from "react-icons/cg";
+import { CiCircleRemove } from "react-icons/ci";
+import { BiTrash } from "react-icons/bi";
 import "./BasketCard.css";
 
 function BasketCard({ cart, setCart }) {
@@ -25,8 +26,14 @@ function BasketCard({ cart, setCart }) {
     handlePrice();
   });
 
+  const removeItemAtBasket = (id) => {
+    const updatedBasket = cart.filter((product) => product.id !== id);
+    setCart(updatedBasket);
+    handlePrice();
+  };
+
   return (
-    <section>
+    <section className="basket-card">
       {cart.map((product) => (
         <div className="basket-container">
           <div className="product-image">
@@ -34,23 +41,29 @@ function BasketCard({ cart, setCart }) {
           </div>
           <div className="product-info">
             <p>{product.name}</p>
-            <div className="products">
+            <div className="product-ar">
               <button
-                className="add"
+                className="increase-amount"
                 onClick={() => handleChangeAmount(product, 1)}
               >
-                <GoDiffAdded />
+                <CgAdd />
               </button>
-              <span>{product.amount}</span>
+              <span className="amount">{product.amount}</span>
               <button
-                className="remove"
+                className="decrease-amount"
                 onClick={() => handleChangeAmount(product, -1)}
               >
-                <CiSquareRemove />
+                <CiCircleRemove />
               </button>
             </div>
+            <span className="product-price">{product.price} &#8378;</span>
+            <button
+              className="remove-item"
+              onClick={() => removeItemAtBasket(product.id)}
+            >
+              <BiTrash />
+            </button>
           </div>
-          <span className="product-price">{product.price} &#8378;</span>
         </div>
       ))}
       <div className="total">

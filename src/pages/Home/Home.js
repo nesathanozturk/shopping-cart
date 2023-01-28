@@ -7,26 +7,17 @@ import "./Home.css";
 function Home() {
   const [cart, setCart] = useState([]);
 
-  const handleClick = (product) => {
+  const addItemAtBasket = (product) => {
     if (cart.indexOf(product) !== -1) return;
     setCart([...cart, product]);
   };
 
-  const handleChange = (product, d) => {
-    const ind = cart.indexOf(product);
-    const arr = cart;
-    arr[ind].amount += d;
-
-    if (arr[ind].amount === 0) arr[ind].amount = 1;
-    setCart([...arr]);
-  };
-
   return (
-    <section>
+    <main>
       <Navbar />
-      <Card handleClick={handleClick} />
-      <Products cart={cart} setCart={setCart} handleChange={handleChange} />
-    </section>
+      <Card addItemAtBasket={addItemAtBasket} />
+      <Products cart={cart} setCart={setCart} />
+    </main>
   );
 }
 

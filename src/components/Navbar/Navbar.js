@@ -1,14 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import shopping from "../../assets/shopping.png";
 
 function Navbar() {
   return (
     <header>
       <nav>
         <NavLink className="link" to="/">
-          <img src={shopping} alt="Shopping Cart Logo" />
+          <h1>Sport Shopping</h1>
         </NavLink>
         <ul>
           <li>

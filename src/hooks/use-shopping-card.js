@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import ShoppingCardContext from "../context/ShoppingCardContext";
+import ShoppingCard from "../context/ShoppingCardContext";
 
 function useShoppingCardContext() {
-  return useContext(ShoppingCardContext);
+  return useContext(ShoppingCard);
 }
 
 export default useShoppingCardContext;

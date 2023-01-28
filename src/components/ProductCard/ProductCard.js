@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProductCard.css";
 
-function ProductCard({ product, handleClick }) {
+function ProductCard({ product, addItemAtBasket }) {
   return (
     <div class="container">
       <div class="card">
@@ -20,7 +20,9 @@ function ProductCard({ product, handleClick }) {
           <div class="price">
             <h3>{product.price} &#8378;</h3>
           </div>
-          <button onClick={() => handleClick(product)}>Add to basket</button>
+          <button onClick={() => addItemAtBasket(product)}>
+            Add to basket
+          </button>
         </div>
       </div>
     </div>
