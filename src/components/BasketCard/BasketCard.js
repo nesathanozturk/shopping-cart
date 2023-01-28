@@ -49,8 +49,8 @@ function BasketCard({ cart, setCart }) {
                 <CiSquareRemove />
               </button>
             </div>
-            <span>{product.price} &#8378;</span>
           </div>
+          <span className="product-price">{product.price} &#8378;</span>
         </div>
       ))}
       <div className="total">

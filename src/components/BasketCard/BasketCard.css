@@ -43,9 +43,11 @@ img {
   font-weight: bold;
 }
 
-.product-info span:nth-child(2) {
-  font-size: 30px;
-  margin-bottom: 5px;
+.product-price {
+  color: #ccc;
+  margin: 100px 0 0 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .add {
