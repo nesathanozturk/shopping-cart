@@ -6,6 +6,7 @@ import "./Home.css";
 
 function Home() {
   const [cart, setCart] = useState([]);
+  const [modal, setModal] = useState(false);
 
   const addItemAtBasket = (product) => {
     if (cart.indexOf(product) !== -1) return;
@@ -14,9 +15,12 @@ function Home() {
 
   return (
     <main>
-      <Navbar size={cart.length} />
-      <Card addItemAtBasket={addItemAtBasket} />
-      <Products cart={cart} setCart={setCart} />
+      <Navbar cartLength={cart.length} setModal={setModal} />
+      {modal ? (
+        <Products cart={cart} setCart={setCart} />
+      ) : (
+        <Card addItemAtBasket={addItemAtBasket} />
+      )}
     </main>
   );
 }

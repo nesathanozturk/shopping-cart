@@ -1,6 +1,5 @@
 .basket-card {
-  background-color: rgb(89, 88, 89);
-  width: 50%;
+  width: 90%;
   margin: auto;
   padding: 20px;
   border-radius: 20px;
@@ -51,20 +50,20 @@
 }
 
 .product-price {
+  color: rgb(225, 218, 218) !important;
   position: absolute;
   bottom: 0;
   right: 0;
-  color: rgb(225, 218, 218) !important;
-  font-size: 20px !important;
-  font-weight: bold;
   margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .increaseBtn {
   color: rgb(41, 155, 41);
-  font-size: 40px;
   margin-right: 10px;
   padding: 5px 10px;
+  font-size: 40px;
   transition: color 0.1s ease-in-out;
 }
 
@@ -75,9 +74,9 @@
 
 .decreaseBtn {
   color: #ff0000;
-  font-size: 40px;
   margin-left: 10px;
   padding: 5px 10px;
+  font-size: 40px;
   transition: color 0.1s ease-in-out;
 }
 
@@ -87,27 +86,43 @@
 
 .removeBtn {
   color: red;
-  font-size: 30px;
   position: absolute;
   right: 0px;
   top: 10px;
+  font-size: 30px;
   cursor: pointer;
 }
 
 .total {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   color: #fff;
 }
 
 .total span:nth-child(1) {
+  background: #ff0000;
   margin-top: 20px;
-  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 1.3rem;
   font-weight: bold;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
+}
+
+.total span:nth-child(1):hover {
+  background: #980606;
 }
 
 .total span:nth-child(2) {
   margin-top: 20px;
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+.warning {
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
 }

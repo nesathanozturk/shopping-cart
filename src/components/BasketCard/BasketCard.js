@@ -16,20 +16,24 @@ function BasketCard({ cart, setCart }) {
     setCart([...arr]);
   };
 
-  const handlePrice = () => {
+  const handleProductPrice = () => {
     let productPrice = 0;
     cart.map((product) => (productPrice += product.amount * product.price));
     setPrice(productPrice);
   };
 
   useEffect(() => {
-    handlePrice();
+    handleProductPrice();
   });
 
   const removeItemAtBasket = (id) => {
     const updatedBasket = cart.filter((product) => product.id !== id);
     setCart(updatedBasket);
-    handlePrice();
+    handleProductPrice();
+  };
+
+  const clearAllItems = (id) => {
+    setCart(cart.filter((product) => product.id && !product.id));
   };
 
   return (
@@ -66,10 +70,14 @@ function BasketCard({ cart, setCart }) {
           </div>
         </div>
       ))}
-      <div className="total">
-        <span>Total Price of Your Basket:</span>
-        <span>{price} &#8378;</span>
-      </div>
+      {cart?.length ? (
+        <div className="total">
+          <span onClick={() => clearAllItems()}>Clear All</span>
+          <span>Total Amount:&nbsp; {price} &#8378;</span>
+        </div>
+      ) : (
+        <p className="warning">There is nothing in your basket!</p>
+      )}
     </section>
   );
 }
