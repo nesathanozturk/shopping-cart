@@ -3,7 +3,7 @@ import products from "../../config/data";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import "./Card.css";
 
-function Card({ addItemAtBasket }) {
+function Card({ addProductAtBasket }) {
   return (
     <section>
       <div className="products-box ">
@@ -11,7 +11,7 @@ function Card({ addItemAtBasket }) {
           <ProductCard
             key={product.id}
             product={product}
-            addItemAtBasket={addItemAtBasket}
+            addProductAtBasket={addProductAtBasket}
           />
         ))}
       </div>

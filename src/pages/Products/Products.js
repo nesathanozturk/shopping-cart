@@ -1,10 +1,10 @@
 import React from "react";
 import BasketCard from "../../components/BasketCard/BasketCard";
 
-function Products({ cart, setCart }) {
+function Products({ basketItems, setBasketItems }) {
   return (
     <div>
-      <BasketCard cart={cart} setCart={setCart} />
+      <BasketCard basketItems={basketItems} setBasketItems={setBasketItems} />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import "./Navbar.css";
 
-function Navbar({ cartLength, setModal }) {
+function Navbar({ basketItemsLength, setModal }) {
   return (
     <header>
       <nav>
@@ -11,7 +11,7 @@ function Navbar({ cartLength, setModal }) {
           <li onClick={() => setModal(false)}>Products</li>
           <li>
             <FaShoppingCart className="icon" onClick={() => setModal(true)} />
-            <span>{cartLength}</span>
+            <span>{basketItemsLength}</span>
           </li>
         </ul>
       </nav>

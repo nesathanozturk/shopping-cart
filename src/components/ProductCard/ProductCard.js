@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProductCard.css";
 
-function ProductCard({ product, addItemAtBasket }) {
+function ProductCard({ product, addProductAtBasket }) {
   return (
     <div class="container">
       <div class="card">
@@ -12,15 +12,15 @@ function ProductCard({ product, addItemAtBasket }) {
           <h2>{product.name}</h2>
           <div class="size">
             <h3>Size:</h3>
-            <span>41</span>
-            <span>42</span>
-            <span>43</span>
-            <span>44</span>
+            <span>{product.sizes[0].text}</span>
+            <span>{product.sizes[1].text}</span>
+            <span>{product.sizes[2].text}</span>
+            <span>{product.sizes[3].text}</span>
           </div>
           <div class="price">
             <h3>{product.price} &#8378;</h3>
           </div>
-          <button onClick={() => addItemAtBasket(product)}>
+          <button onClick={() => addProductAtBasket(product)}>
             Add to basket
           </button>
         </div>

@@ -5,6 +5,12 @@ const products = [
     image:
       "https://www.pngarts.com/files/8/Nike-Air-Force-One-PNG-High-Quality-Image.png",
     price: 1999,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -13,6 +19,12 @@ const products = [
     image:
       "https://static.nike.com/a/images/t_default/d82dc1keg33jjklyiw8l/converse-chuck-taylor-all-star-high-top-unisex-shoes-xX439O.png",
     price: 2149,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -20,6 +32,12 @@ const products = [
     name: "Vans Old Skool",
     image: "https://pngimg.com/d/vans_PNG22.png",
     price: 1959,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -28,6 +46,12 @@ const products = [
     image:
       "https://www.pngkey.com/png/full/249-2499887_adidas-kids-superstar-grade-school-casual-shoe-transparent.png",
     price: 2749,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -36,6 +60,12 @@ const products = [
     image:
       "https://static.nike.com/a/images/t_default/cbeeacf3-2101-4a4d-bdb9-9a689d715ffc/blazer-mid-77-vintage-ayakkab%C4%B1s%C4%B1-CBDjT0.png",
     price: 2199,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -44,6 +74,12 @@ const products = [
     image:
       "https://sneakerbaker.com/wp-content/uploads/2022/10/New-Balance-530-Black-White2.png",
     price: 3299,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -51,6 +87,12 @@ const products = [
     name: "Nike Dunk 'Panda'",
     image: "https://static.sneakerjagers.com/products/660x660/185988.jpg",
     price: 2249,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -59,6 +101,12 @@ const products = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/0/03/Stan_Smith_white_and_green.png",
     price: 2749,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -67,6 +115,12 @@ const products = [
     image:
       "https://pngfile.net/download/Tvg6nUeYNLxxF1q9HjmKYSHa74AKlONM7yOQpfb4B9JhXLMgsf7OFq7xtFvkWu6zvlaBpSDNsBcTh51sYCIAj8L2KpVc0KS515xyafryOts4YYqMyvXJIJTaf15e7GgOJvU5woZ31hnkvFJOSjMk1qsftUEYS1THsbcZrYKBe7GkjQ4rLgtldZliaQ43e318z00LPb2J/medium",
     price: 1400,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -75,6 +129,12 @@ const products = [
     image:
       "https://cdn.shopify.com/s/files/1/0324/6781/2487/products/new-balance-990-m990gl3-1_600x600_crop_center.png?v=1603524257",
     price: 6299,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -83,6 +143,12 @@ const products = [
     image:
       "https://cms-cdn.thesolesupplier.co.uk/2017/09/Nike-Lunarglide-6-White2_w900.png",
     price: 1700,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
   {
@@ -91,6 +157,12 @@ const products = [
     image:
       "https://cms-cdn.thesolesupplier.co.uk/2017/09/Adidas-Originals-Hamburg-Solar-Blue_w380.png",
     price: 2301,
+    sizes: [
+      { text: "41", value: 41 },
+      { text: "42", value: 42 },
+      { text: "43", value: 43 },
+      { text: "44", value: 44 },
+    ],
     amount: 1,
   },
 ];

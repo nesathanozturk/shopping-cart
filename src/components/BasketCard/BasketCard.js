@@ -2,23 +2,31 @@ import React, { useState, useEffect } from "react";
 import { CgAdd } from "react-icons/cg";
 import { CiCircleRemove } from "react-icons/ci";
 import { BiTrash } from "react-icons/bi";
+import { toast } from "react-toastify";
 import "./BasketCard.css";
 
-function BasketCard({ cart, setCart }) {
+function BasketCard({ basketItems, setBasketItems }) {
   const [price, setPrice] = useState(0);
 
+  const productRemovedNotify = () =>
+    toast("The product has been removed in the basket.");
+  const allProductRemovedNotify = () =>
+    toast("All the product has been removed in the basket.");
+
   const handleChangeAmount = (product, d) => {
-    const ind = cart.indexOf(product);
-    const arr = cart;
+    const ind = basketItems.indexOf(product);
+    const arr = basketItems;
     arr[ind].amount += d;
 
     if (arr[ind].amount === 0) arr[ind].amount = 1;
-    setCart([...arr]);
+    setBasketItems([...arr]);
   };
 
   const handleProductPrice = () => {
     let productPrice = 0;
-    cart.map((product) => (productPrice += product.amount * product.price));
+    basketItems.map(
+      (product) => (productPrice += product.amount * product.price)
+    );
     setPrice(productPrice);
   };
 
@@ -27,18 +35,20 @@ function BasketCard({ cart, setCart }) {
   });
 
   const removeItemAtBasket = (id) => {
-    const updatedBasket = cart.filter((product) => product.id !== id);
-    setCart(updatedBasket);
+    const updatedBasket = basketItems.filter((product) => product.id !== id);
+    setBasketItems(updatedBasket);
     handleProductPrice();
+    productRemovedNotify();
   };
 
   const clearAllItems = (id) => {
-    setCart(cart.filter((product) => product.id && !product.id));
+    setBasketItems(basketItems.filter((product) => product.id && !product.id));
+    allProductRemovedNotify();
   };
 
   return (
     <section className="basket-card">
-      {cart.map((product) => (
+      {basketItems.map((product) => (
         <div className="basket-container">
           <div className="product-image">
             <img src={product.image} alt={product.name} />
@@ -70,7 +80,7 @@ function BasketCard({ cart, setCart }) {
           </div>
         </div>
       ))}
-      {cart?.length ? (
+      {basketItems?.length ? (
         <div className="total">
           <span onClick={() => clearAllItems()}>Clear All</span>
           <span>Total Amount:&nbsp; {price} &#8378;</span>
