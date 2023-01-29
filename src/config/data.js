@@ -10,7 +10,8 @@ const products = [
   {
     id: 2,
     name: "Converse Chuck 70",
-    image: "https://pngimg.com/uploads/converse/small/converse_PNG66.png",
+    image:
+      "https://static.nike.com/a/images/t_default/d82dc1keg33jjklyiw8l/converse-chuck-taylor-all-star-high-top-unisex-shoes-xX439O.png",
     price: 2149,
     amount: 1,
   },
@@ -47,7 +48,7 @@ const products = [
   },
   {
     id: 7,
-    name: "Nike Dunk Low Retro 'Panda'",
+    name: "Nike Dunk 'Panda'",
     image: "https://static.sneakerjagers.com/products/660x660/185988.jpg",
     price: 2249,
     amount: 1,
@@ -62,7 +63,7 @@ const products = [
   },
   {
     id: 9,
-    name: "Puma",
+    name: "Puma Power Blue",
     image:
       "https://pngfile.net/download/Tvg6nUeYNLxxF1q9HjmKYSHa74AKlONM7yOQpfb4B9JhXLMgsf7OFq7xtFvkWu6zvlaBpSDNsBcTh51sYCIAj8L2KpVc0KS515xyafryOts4YYqMyvXJIJTaf15e7GgOJvU5woZ31hnkvFJOSjMk1qsftUEYS1THsbcZrYKBe7GkjQ4rLgtldZliaQ43e318z00LPb2J/medium",
     price: 1400,
@@ -82,6 +83,14 @@ const products = [
     image:
       "https://cms-cdn.thesolesupplier.co.uk/2017/09/Nike-Lunarglide-6-White2_w900.png",
     price: 1700,
+    amount: 1,
+  },
+  {
+    id: 12,
+    name: "adidas Hamburg",
+    image:
+      "https://cms-cdn.thesolesupplier.co.uk/2017/09/Adidas-Originals-Hamburg-Solar-Blue_w380.png",
+    price: 2301,
     amount: 1,
   },
 ];
