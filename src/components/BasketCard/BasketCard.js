@@ -49,7 +49,7 @@ function BasketCard({ basketItems, setBasketItems }) {
   return (
     <section className="basket-card">
       {basketItems.map((product) => (
-        <div className="basket-container">
+        <div key={product.id} className="basket-container">
           <div className="product-image">
             <img src={product.image} alt={product.name} />
           </div>

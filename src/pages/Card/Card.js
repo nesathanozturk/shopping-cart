@@ -6,7 +6,7 @@ import "./Card.css";
 function Card({ addProductAtBasket }) {
   return (
     <section>
-      <div className="products-box ">
+      <div className="products-box">
         {products.map((product) => (
           <ProductCard
             key={product.id}
