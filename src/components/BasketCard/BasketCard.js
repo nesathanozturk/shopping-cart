@@ -14,12 +14,12 @@ function BasketCard({ basketItems, setBasketItems }) {
     toast("All the product has been removed in the basket.");
 
   const handleChangeAmount = (product, d) => {
-    const ind = basketItems.indexOf(product);
-    const arr = basketItems;
-    arr[ind].amount += d;
+    const i = basketItems.indexOf(product);
+    const items = basketItems;
+    items[i].amount += d;
 
-    if (arr[ind].amount === 0) arr[ind].amount = 1;
-    setBasketItems([...arr]);
+    if (items[i].amount === 0) items[i].amount = 1;
+    setBasketItems([...items]);
   };
 
   const handleProductPrice = () => {
