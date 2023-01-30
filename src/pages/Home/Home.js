@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../../pages/Navbar/Navbar";
 import Card from "../../pages/Card/Card";
 import Products from "../Products/Products";
 import { toast } from "react-toastify";
