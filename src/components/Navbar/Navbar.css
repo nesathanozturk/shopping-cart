@@ -14,7 +14,7 @@ nav ul {
 
 h1 {
   color: #fff;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   font-size: 2rem;
   text-transform: uppercase;
 }
@@ -37,4 +37,16 @@ li:hover {
 
 nav span {
   font-size: 1.4rem;
+}
+
+@media (max-width: 511px) {
+  h1 {
+    font-size: 1.15rem;
+  }
+  li {
+    font-size: 1.05rem;
+  }
+  nav span {
+    font-size: 1.05rem;
+  }
 }

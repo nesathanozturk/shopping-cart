@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Card from "../../pages/Card/Card";
 import Products from "../Products/Products";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Home.css";
 import "animate.css";
@@ -28,19 +28,6 @@ function Home() {
       ) : (
         <Card addProductAtBasket={addProductAtBasket} />
       )}
-      <ToastContainer
-        className="toastify"
-        position="top-center"
-        autoClose={1500}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
     </main>
   );
 }

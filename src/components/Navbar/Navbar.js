@@ -6,7 +6,7 @@ function Navbar({ basketItemsLength, setModal }) {
   return (
     <header>
       <nav>
-        <h1>Sport Shop</h1>
+        <h1>Shopping Cart</h1>
         <ul>
           <li onClick={() => setModal(false)}>Products</li>
           <li>
