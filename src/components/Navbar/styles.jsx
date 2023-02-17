@@ -12,15 +12,15 @@ export const Nav = styled.nav`
 
 export const NavHeader = styled.div`
   display: inline;
-`;
 
-export const Title = styled.div`
-  margin: 15px;
-  color: #f0a04b;
-  font-size: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  .nav-logo {
+    margin: 15px;
+    color: #f0a04b;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
 `;
 
 export const NavLinks = styled.div`
@@ -35,13 +35,13 @@ export const NavLinks = styled.div`
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      color: #ccc;
+      color: #666;
     }
   }
 `;
 
 export const Basket = styled.span`
-  background-color: #ccc;
+  background-color: #666;
   color: #fff;
   postion: relative;
   margin: 10px 5px 5px 5px;
@@ -49,6 +49,11 @@ export const Basket = styled.span`
   padding: 7px 12px 4px 12px;
   font-size: 25px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #adadad;
+  }
 `;
 
 export const Length = styled.span`

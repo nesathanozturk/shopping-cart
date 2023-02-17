@@ -10,7 +10,7 @@ function NotFound404() {
       </ErrorText>
       <Text>Please check that the Web site address is spelled correctly.</Text>
       <Button>
-        <Link className="error" href="/">
+        <Link className="error" to="/">
           Go to Homepage
         </Link>
       </Button>

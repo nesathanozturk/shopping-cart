@@ -1,7 +1,6 @@
 import {
   Nav,
   NavHeader,
-  Title,
   NavLinks,
   Basket,
   Length,
@@ -15,7 +14,9 @@ function Navbar() {
   return (
     <Nav>
       <NavHeader>
-        <Title>Ozturk.</Title>
+        <Link to="/" className="nav-logo">
+          Ozturk.
+        </Link>
       </NavHeader>
       <NavLinks>
         <Link to="/" className="link">
