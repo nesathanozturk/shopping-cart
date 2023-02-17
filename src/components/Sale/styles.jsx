@@ -2,10 +2,8 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   width: 90%;
-  margin: 50px auto auto auto;
+  margin: 50px auto 60px auto;
 `;
-
-export const Wrapper = styled.div``;
 
 export const Info = styled.div`
   display: flex;
@@ -82,3 +80,5 @@ export const CardSale = styled.span`
   padding: 10px;
   border-radius: 50%;
 `;
+
+export const Wrapper = styled.div``;

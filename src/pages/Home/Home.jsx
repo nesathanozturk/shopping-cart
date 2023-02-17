@@ -13,6 +13,7 @@ function Home() {
       <Orders />
       <NewArrivals />
       <Sale />
+      <Footer />
     </div>
   );
 }
