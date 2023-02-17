@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   width: 100%;
-  height: 70px;
+  height: 80px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  -webkit-box-shadow: 0px 12px 14px -3px rgba(0, 0, 0, 0.33);
-  -moz-box-shadow: 0px 12px 14px -3px rgba(0, 0, 0, 0.33);
-  box-shadow: 0px 12px 14px -3px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0px 13px 12px 1px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 13px 12px 1px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 13px 12px 1px rgba(0, 0, 0, 0.41);
 `;
 
 export const NavHeader = styled.div`
