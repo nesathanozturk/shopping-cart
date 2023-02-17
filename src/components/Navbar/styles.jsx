@@ -31,7 +31,7 @@ export const NavLinks = styled.div`
   .link {
     color: #000;
     margin-right: 12px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     transition: all 0.2s ease-in-out;
 
     &:hover {
@@ -41,24 +41,24 @@ export const NavLinks = styled.div`
 `;
 
 export const Basket = styled.span`
-  background-color: #666;
+  background-color: #444;
   color: #fff;
   postion: relative;
   margin: 10px 5px 5px 5px;
   border-radius: 50%;
   padding: 7px 12px 4px 12px;
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 
   &:hover {
-    background-color: #adadad;
+    background-color: #666;
   }
 `;
 
 export const Length = styled.span`
   margin-left: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 `;
 
 export const Options = styled.div`
@@ -72,8 +72,8 @@ export const Options = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   margin: 13px 10px 10px 10px;
   border-radius: 50%;
   cursor: pointer;

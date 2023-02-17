@@ -7,13 +7,12 @@ export const Section = styled.section`
 
 export const Wrapper = styled.div`
   background: #fff;
-  max-width: 97%;
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column-gap: 6px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
   margin: auto;
   padding: 50px 30px;
-  border: 1px solid #e6e6e6;
   border-radius: 12px;
 
   @media (max-width: 943px) {

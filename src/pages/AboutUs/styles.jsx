@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Top = styled.div`
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 `;
 
 export const TitleBox = styled.div`
@@ -25,11 +25,9 @@ export const Title = styled.span`
   border-bottom: 1px solid #000;
 `;
 
-export const TitleAltBox = styled.div``;
-
 export const TitleAlt = styled.p`
   color: #f0a04b;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 `;
 
 export const WhoWeAreTitle = styled.h1`
@@ -39,7 +37,10 @@ export const WhoWeAreTitle = styled.h1`
 `;
 
 export const WhoWeAreTitleAlt = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: left;
   line-height: 1.5;
+  font-weight: 100;
 `;
+
+export const TitleAltBox = styled.div``;

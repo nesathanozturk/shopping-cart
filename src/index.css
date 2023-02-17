@@ -1,5 +1,5 @@
 /* Font */
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap");
 
 /* Reset */
 *,
@@ -14,7 +14,7 @@
 html,
 body {
   height: 100%;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heebo", sans-serif;
 }
 
 a {
