@@ -8,6 +8,7 @@ import {
   Image,
   Options,
 } from "./styles.jsx";
+import { Link } from "react-router-dom";
 import { BsFillBasketFill } from "react-icons/bs";
 
 function Navbar() {
@@ -17,6 +18,12 @@ function Navbar() {
         <Title>Ozturk.</Title>
       </NavHeader>
       <NavLinks>
+        <Link to="/" className="link">
+          Home
+        </Link>
+        <Link to="/about" className="link">
+          About Us
+        </Link>
         <Basket>
           <BsFillBasketFill />
           <Length>1</Length>

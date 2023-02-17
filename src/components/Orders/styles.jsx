@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  margin-top: 30px;
+  margin-top: 50px;
   border-radius: 10px;
 `;
 
@@ -15,6 +15,10 @@ export const Wrapper = styled.div`
   padding: 50px 30px;
   border: 1px solid #e6e6e6;
   border-radius: 12px;
+
+  @media (max-width: 943px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const Order = styled.div`
@@ -37,7 +41,6 @@ export const Num = styled.h1`
 export const Title = styled.h1`
   margin-bottom: 10px;
   font-size: 1.5rem;
-  font-weight: 600;
 `;
 
 export const Description = styled.p`

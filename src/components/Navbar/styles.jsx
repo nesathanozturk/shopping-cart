@@ -8,9 +8,6 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  -webkit-box-shadow: 0px 13px 12px 1px rgba(0, 0, 0, 0.41);
-  -moz-box-shadow: 0px 13px 12px 1px rgba(0, 0, 0, 0.41);
-  box-shadow: 0px 13px 12px 1px rgba(0, 0, 0, 0.41);
 `;
 
 export const NavHeader = styled.div`
@@ -19,21 +16,35 @@ export const NavHeader = styled.div`
 
 export const Title = styled.div`
   margin: 15px;
+  color: #f0a04b;
   font-size: 30px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 `;
 
 export const NavLinks = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .link {
+    color: #000;
+    margin-right: 12px;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
 `;
 
 export const Basket = styled.span`
   background-color: #ccc;
   color: #fff;
   postion: relative;
-  margin: 10px 5px 5px 0;
+  margin: 10px 5px 5px 5px;
   border-radius: 50%;
   padding: 7px 12px 4px 12px;
   font-size: 25px;
