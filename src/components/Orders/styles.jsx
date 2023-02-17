@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  background: #eeeeee;
   margin-top: 30px;
   border-radius: 10px;
 `;
 
 export const Wrapper = styled.div`
   background: #fff;
-  max-width: 100%;
+  max-width: 97%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;

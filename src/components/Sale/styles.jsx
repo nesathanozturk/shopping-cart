@@ -77,8 +77,8 @@ export const CardSale = styled.span`
   position: absolute;
   top: 5px;
   right: 5px;
-  color: #fff;
   background-color: #f0a04b;
-  padding: 5px;
+  color: #fff;
+  padding: 10px;
   border-radius: 50%;
 `;
