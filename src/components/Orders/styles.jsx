@@ -36,12 +36,12 @@ export const Num = styled.h1`
 
 export const Title = styled.h1`
   margin-bottom: 10px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
 `;
 
 export const Description = styled.p`
   color: #666;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 25px;
 `;

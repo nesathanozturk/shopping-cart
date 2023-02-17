@@ -30,7 +30,9 @@ function Sale() {
                 <CardTitle>White Marble</CardTitle>
               </CardContent>
               <CardContent>
-                <CardPrice>$300</CardPrice>
+                <CardPrice>
+                  <del>$300</del> <u>$200</u>
+                </CardPrice>
               </CardContent>
               <CardSale>Sale!</CardSale>
             </div>
@@ -45,7 +47,9 @@ function Sale() {
                 <CardTitle>White Marble</CardTitle>
               </CardContent>
               <CardContent>
-                <CardPrice>$300</CardPrice>
+                <CardPrice>
+                  <del>$300</del> <u>$200</u>
+                </CardPrice>
               </CardContent>
               <CardSale>Sale!</CardSale>
             </div>
@@ -60,7 +64,9 @@ function Sale() {
                 <CardTitle>White Marble</CardTitle>
               </CardContent>
               <CardContent>
-                <CardPrice>$300</CardPrice>
+                <CardPrice>
+                  <del>$300</del> <u>$200</u>
+                </CardPrice>
               </CardContent>
               <CardSale>Sale!</CardSale>
             </div>
