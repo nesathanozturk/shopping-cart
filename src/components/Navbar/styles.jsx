@@ -50,8 +50,8 @@ export const Options = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   margin: 10px 10px 10px 10px;
   border-radius: 50%;
   cursor: pointer;

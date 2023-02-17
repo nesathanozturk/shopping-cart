@@ -12,18 +12,18 @@ import { BsFillBasketFill } from "react-icons/bs";
 function Navbar() {
   return (
     <Nav>
-      <NavHeader class="nav-header">
-        <Title class="nav-title">Ozturk.</Title>
+      <NavHeader>
+        <Title>Ozturk.</Title>
       </NavHeader>
-      <NavLinks class="nav-links">
+      <NavLinks>
         <Basket>
           <BsFillBasketFill />
         </Basket>
         <Image
-          src="https://www.w3schools.com/howto/img_avatar.png"
+          src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
           alt="User Profile"
         />
-        <Options className="options">
+        <Options>
           <span>Basket</span>
           <span>Account</span>
           <span>Log out</span>
