@@ -4,6 +4,7 @@ import {
   Title,
   NavLinks,
   Basket,
+  Length,
   Image,
   Options,
 } from "./styles.jsx";
@@ -18,6 +19,7 @@ function Navbar() {
       <NavLinks>
         <Basket>
           <BsFillBasketFill />
+          <Length>1</Length>
         </Basket>
         <Image
           src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"

@@ -32,11 +32,17 @@ export const NavLinks = styled.div`
 export const Basket = styled.span`
   background-color: #ccc;
   color: #fff;
+  postion: relative;
   margin: 10px 5px 5px 0;
   border-radius: 50%;
-  padding: 5px 10px 0 10px;
+  padding: 7px 12px 4px 12px;
   font-size: 25px;
   cursor: pointer;
+`;
+
+export const Length = styled.span`
+  margin-left: 10px;
+  font-size: 1.5rem;
 `;
 
 export const Options = styled.div`
@@ -52,7 +58,7 @@ export const Options = styled.div`
 export const Image = styled.img`
   width: 42px;
   height: 42px;
-  margin: 10px 10px 10px 10px;
+  margin: 13px 10px 10px 10px;
   border-radius: 50%;
   cursor: pointer;
 
