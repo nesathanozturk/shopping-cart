@@ -50,7 +50,7 @@ export const CardImg = styled.img`
 `;
 
 export const CardContent = styled.div`
-  padding: 0.4rem;
+  padding: 0.5rem;
 `;
 
 export const CardTitle = styled.p`
