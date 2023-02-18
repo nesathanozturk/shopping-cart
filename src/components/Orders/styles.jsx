@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
   display: grid;
   margin: auto;
   padding: 50px 30px;
+  border: 1px solid #e6e6e6;
   border-radius: 12px;
 
   @media (max-width: 943px) {

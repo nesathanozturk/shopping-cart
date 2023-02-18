@@ -10,7 +10,6 @@ function Home() {
     <div>
       <Navbar />
       <Preview />
-      <Orders />
       <NewArrivals />
       <Sale />
       <Footer />

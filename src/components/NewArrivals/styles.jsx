@@ -26,6 +26,7 @@ export const Description = styled.p`
   margin-bottom: 10px;
   font-size: 1rem;
   letter-spacing: 1px;
+  text-align: center;
 `;
 
 export const Products = styled.div`
@@ -34,11 +35,15 @@ export const Products = styled.div`
   align-items: center;
   gap: 3rem;
   margin-top: 40px;
+
+  @media (max-width: 745px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const ProductItem = styled.div`
   background-color: #fff;
-  width: 17rem;
+  width: 15rem;
   overflow: hidden;
   border-radius: 0.4rem;
   cursor: pointer;
@@ -53,15 +58,15 @@ export const ProductItem = styled.div`
 
 export const CardImg = styled.img`
   width: 100%;
-  height: 20rem;
+  height: 15rem;
 `;
 
 export const CardContent = styled.div`
-  padding: 0.4rem;
+  padding: 0.3rem;
 `;
 
 export const CardTitle = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   letter-spacing: 0.1rem;
   color: #3d3d3d;
 `;

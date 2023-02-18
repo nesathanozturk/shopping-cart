@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Nav,
   NavHeader,
@@ -11,6 +12,8 @@ import { Link } from "react-router-dom";
 import { BsFillBasketFill } from "react-icons/bs";
 
 function Navbar() {
+  const [basket, setBasket] = useState(false);
+
   return (
     <Nav>
       <NavHeader>
@@ -26,7 +29,7 @@ function Navbar() {
           About Us
         </Link>
         <Basket>
-          <BsFillBasketFill />
+          <BsFillBasketFill onClick={() => setBasket(!basket)} />
           <Length>1</Length>
         </Basket>
         <Image
