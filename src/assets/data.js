@@ -117,7 +117,7 @@ export const products = [
   },
   {
     id: 13,
-    title: "Suit",
+    title: "Gray Suit",
     image:
       "https://images.unsplash.com/photo-1619102814948-e164e584cf0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     price: 150,
