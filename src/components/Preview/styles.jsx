@@ -2,11 +2,45 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   width: 100%;
-  height: 90vh;
-  background: url("https://www.mrporter.com/cms/ycm/resource/blob/516956/afc2ed4911afe2c5b6ad4fee04381a84/9562a843-0ebd-4009-8a19-31fa2192dd87-data.jpg")
-    center center/cover no-repeat;
+  height: 100vh;
   position: relative;
   color: #fff;
+  margin-bottom: 40px;
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+`;
+
+export const SliderButtons = styled.button`
+  width: 50px;
+  height: 10%;
+  color: red;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+`;
+
+export const NextButton = styled.button`
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 100px;
+  right: -1210px;
+`;
+
+export const PrevButton = styled.button`
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 100px;
+  left: 20px;
 `;
 
 export const Wrapper = styled.div`
@@ -32,7 +66,7 @@ export const TitleAlt = styled.p`
 export const Button = styled.button`
   background: transparent;
   color: #f2921d;
-  padding: 15px 30px 15px 30px;
+  padding: 10px 30px 10px 30px;
   font-size: 1.2rem;
   border: 1px solid #f2921d;
   outline: none;
