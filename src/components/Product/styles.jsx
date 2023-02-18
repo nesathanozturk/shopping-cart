@@ -26,6 +26,7 @@ export const Products = styled.div`
   gap: 3rem;
   margin-top: 30px;
   flex-wrap: wrap;
+  text-align: center;
 `;
 
 export const ProductItem = styled.div`
@@ -35,12 +36,11 @@ export const ProductItem = styled.div`
   overflow: hidden;
   border-radius: 0.4rem;
   cursor: pointer;
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.5);
   transition: 0.2s;
 
   &:hover {
     transform: translateY(-0.5%);
-    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
   }
 `;
 
@@ -66,18 +66,20 @@ export const CardPrice = styled.p`
 `;
 
 export const CardButton = styled.button`
-  background: #008000;
+  background: #0652dd;
   color: #fff;
-  width: 100%;
+  width: 10em;
+
   margin-bottom: 5px;
-  padding: 10px;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 100px;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 10px;
-  transition: background 0.2s ease-in-out;
+  transition: transform 0.1s;
 
   &:hover {
-    background: #096b09;
+    transform: scale(1.1);
   }
 `;
 
