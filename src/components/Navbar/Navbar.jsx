@@ -25,6 +25,9 @@ function Navbar() {
         <Link to="/" className="link">
           Home
         </Link>
+        <Link to="/products" className="link">
+          Products
+        </Link>
         <Link to="/aboutus" className="link">
           About Us
         </Link>
