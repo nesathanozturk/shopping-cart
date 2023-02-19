@@ -32,7 +32,7 @@ function NewArrivals() {
                   <CardTitle>{product.title}</CardTitle>
                 </CardContent>
                 <CardContent>
-                  <CardPrice>{product.price}</CardPrice>
+                  <CardPrice>&#x24;{product.price}</CardPrice>
                 </CardContent>
               </div>
             </ProductItem>
