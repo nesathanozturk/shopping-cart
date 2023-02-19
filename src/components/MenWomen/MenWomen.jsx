@@ -2,7 +2,6 @@ import {
   Section,
   Info,
   Title,
-  Description,
   Products,
   ProductItem,
   CardImg,
@@ -12,19 +11,15 @@ import {
 } from "./styles.jsx";
 import { products } from "../../assets/data";
 
-function NewArrivals() {
+function MenWomen() {
   return (
     <Section>
       <div>
         <Info>
-          <Title>New Arrivals</Title>
-          <Description>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore,
-            fugiat. Cumque ducimus sit quos corrupti.
-          </Description>
+          <Title>Clothing For Men And Women</Title>
         </Info>
         <Products>
-          {products.slice(9, 12).map((product) => (
+          {products.slice(4, 8).map((product) => (
             <ProductItem>
               <div>
                 <CardImg src={product.image} alt={product.title} />
@@ -43,4 +38,4 @@ function NewArrivals() {
   );
 }
 
-export default NewArrivals;
+export default MenWomen;

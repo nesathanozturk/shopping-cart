@@ -77,5 +77,3 @@ export const CardSale = styled.span`
   padding: 10px;
   border-radius: 50%;
 `;
-
-export const Wrapper = styled.div``;
