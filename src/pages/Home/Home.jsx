@@ -8,14 +8,14 @@ import MenWomen from "../../components/MenWomen/MenWomen";
 
 function Home() {
   return (
-    <div>
+    <>
       <Navbar />
       <Preview />
       <MenWomen />
       <NewArrivals />
       <Sale />
       <Footer />
-    </div>
+    </>
   );
 }
 

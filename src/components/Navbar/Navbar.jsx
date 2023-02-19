@@ -1,50 +1,36 @@
 import { useState } from "react";
 import {
   Nav,
-  NavHeader,
-  NavLinks,
+  Logo,
+  NavItems,
+  NavLink,
   Basket,
-  Length,
-  Image,
-  Options,
+  Close,
+  Hamburger,
 } from "./styles.jsx";
-import { Link } from "react-router-dom";
-import { BsFillBasketFill } from "react-icons/bs";
 
 function Navbar() {
-  const [basket, setBasket] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Nav>
-      <NavHeader>
-        <Link to="/" className="nav-logo">
-          Ozturk.
-        </Link>
-      </NavHeader>
-      <NavLinks>
-        <Link to="/" className="link">
-          Home
-        </Link>
-        <Link to="/products" className="link">
-          Products
-        </Link>
-        <Link to="/about" className="link">
-          About Us
-        </Link>
-        <Basket>
-          <BsFillBasketFill onClick={() => setBasket(!basket)} />
-          <Length>1</Length>
-        </Basket>
-        <Image
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
-          alt="User Profile"
-        />
-        <Options>
-          <span>Basket</span>
-          <span>Account</span>
-          <span>Log out</span>
-        </Options>
-      </NavLinks>
+      <div>
+        <Logo>Ozturk.</Logo>
+      </div>
+      <NavItems className={`nav-items ${isOpen && "open"}`}>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/products">Products</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/basket">
+          <Basket />
+        </NavLink>
+      </NavItems>
+      <div
+        className={`nav-toggle ${isOpen && "open"}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span>{isOpen ? <Close /> : <Hamburger />}</span>
+      </div>
     </Nav>
   );
 }

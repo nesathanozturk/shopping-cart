@@ -4,11 +4,11 @@ import Footer from "../../components/Footer/Footer";
 
 function Products() {
   return (
-    <div>
+    <>
       <Navbar />
       <ProductPage />
       <Footer />
-    </div>
+    </>
   );
 }
 
