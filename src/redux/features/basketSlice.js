@@ -3,43 +3,51 @@ import { createSlice } from "@reduxjs/toolkit";
 export const basketSlice = createSlice({
   name: "basket",
   initialState: {
-    basket: [],
+    basketItems: [],
     totalAmount: 0,
   },
   reducers: {
     addToBasket: (state, action) => {
       const newItem = action.payload;
-      const existItem = state.basket.find((item) => item.id === newItem.id);
+      const existItem = state.basketItems.find(
+        (item) => item.id === newItem.id
+      );
 
       if (existItem) {
         existItem.amount++;
         existItem.totalPrice += newItem.price;
       } else {
-        state.basket.push({
+        state.basketItems.push({
           id: newItem.id,
+          image: newItem.image,
+          title: newItem.title,
           price: newItem.price,
           amount: 1,
           totalPrice: newItem.price,
-          title: newItem.title,
-          cover: newItem.cover,
         });
         state.totalAmount++;
       }
     },
     removeFromBasket: (state, action) => {
       const id = action.payload;
-      const exitstingItem = state.basket.find((item) => item.id === id);
+      const exitstingItem = state.basketItems.find((item) => item.id === id);
       if (exitstingItem.amount === 1) {
-        state.basket = state.basket.filter((item) => item.id !== id);
+        state.basketItems = state.basketItems.filter((item) => item.id !== id);
         state.totalAmount--;
       } else {
         exitstingItem.amount--;
         exitstingItem.totalPrice -= exitstingItem.price;
       }
     },
+    removeItem: (state, action) => {
+      return state.filter((item) => item.id !== action.payload.id);
+    },
+    clearBasket: (state, action) => {
+      return state.filter((item) => item.id !== action.payload.id);
+    },
   },
 });
 
-export const { addToBasket, removeFromBasket } = basketSlice.actions;
+export const basketActions = basketSlice.actions;
 
 export default basketSlice.reducer;

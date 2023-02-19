@@ -1,15 +1,5 @@
 import styled from "styled-components";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { MdOutlineRemoveCircleOutline } from "react-icons/md";
-
-export const Section = styled.section`
-  background: #fff;
-  max-width: 100%;
-  padding: 20px;
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
-  transition: 0.5s;
-`;
 
 export const BasketCard = styled.div`
   width: 100%;
