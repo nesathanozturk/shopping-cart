@@ -1,0 +1,79 @@
+import styled from "styled-components";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { MdOutlineRemoveCircleOutline } from "react-icons/md";
+
+export const Section = styled.section`
+  background: #fff;
+  max-width: 100%;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  transition: 0.5s;
+`;
+
+export const BasketCard = styled.div`
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  transition: 0.5s;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+    cursor: pointer;
+  }
+`;
+
+export const Image = styled.img`
+  width: 105px;
+  height: 125px;
+  object-fit: cover;
+  margin-right: 20px;
+`;
+
+export const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Price = styled.h3`
+  font-size: 17px;
+`;
+
+export const Title = styled.p`
+  margin: 10px 0;
+`;
+
+export const Buttons = styled.div`
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px 20px;
+  background-color: #212121;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+`;
+
+export const Button = styled.button`
+  color: #fff;
+  font-size: 25px;
+`;
+
+export const Amount = styled.span`
+  padding: 5px;
+  font-size: 1.1rem;
+`;
+
+export const Remove = styled(MdOutlineRemoveCircleOutline)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: red;
+  font-size: 1.6rem;
+`;

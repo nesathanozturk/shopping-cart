@@ -53,7 +53,7 @@ function Product() {
                     <CardTitle>{product.title}</CardTitle>
                   </CardContent>
                   <CardContent>
-                    <CardPrice>${product.price}</CardPrice>
+                    <CardPrice>&#x24;{product.price}</CardPrice>
                   </CardContent>
                   <CardContent>
                     <CardButton>Add to Basket</CardButton>
