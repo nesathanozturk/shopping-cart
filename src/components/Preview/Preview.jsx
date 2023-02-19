@@ -3,11 +3,7 @@ import {
   SliderButtons,
   NextButton,
   PrevButton,
-  Wrapper,
   Img,
-  Title,
-  TitleAlt,
-  Button,
 } from "./styles.jsx";
 import { images } from "../../assets/data";
 import {
@@ -60,13 +56,6 @@ function Preview() {
           <Img key={image.id} src={image.image} alt={image.alt} />
         ))}
       </Slider>
-      <Wrapper>
-        <Title>
-          NEW Jack & Jones Jackets <br /> In-stock Now
-        </Title>
-        <TitleAlt>Shop now and get 15% off your order!</TitleAlt>
-        <Button>Shop Now</Button>
-      </Wrapper>
     </Section>
   );
 }
