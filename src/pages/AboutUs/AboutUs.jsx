@@ -30,7 +30,9 @@ function AboutUs() {
           </TitleAltBox>
         </Top>
         <div>
-          <WhoWeAreTitle>Who We are?</WhoWeAreTitle>
+          <TitleBox>
+            <WhoWeAreTitle>Who We are?</WhoWeAreTitle>
+          </TitleBox>
           <WhoWeAreTitleAlt>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Perferendis recusandae alias aspernatur et nostrum. Aspernatur error

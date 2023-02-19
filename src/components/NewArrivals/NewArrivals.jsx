@@ -25,7 +25,7 @@ function NewArrivals() {
         </Info>
         <Products>
           {products.slice(9, 12).map((product) => (
-            <ProductItem>
+            <ProductItem key={product.id}>
               <div>
                 <CardImg src={product.image} alt={product.title} />
                 <CardContent>

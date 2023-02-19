@@ -21,7 +21,7 @@ function Sale() {
         </Info>
         <Products>
           {products.slice(1, 4).map((product) => (
-            <ProductItem>
+            <ProductItem key={product.id}>
               <div>
                 <CardImg src={product.image} alt={product.title} />
                 <CardContent>

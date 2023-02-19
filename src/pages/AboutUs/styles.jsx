@@ -30,10 +30,11 @@ export const TitleAlt = styled.p`
   font-size: 1.4rem;
 `;
 
-export const WhoWeAreTitle = styled.h1`
+export const WhoWeAreTitle = styled.span`
   margin-bottom: 20px;
   font-size: 3rem;
   letter-spacing: 0.3rem;
+  border-bottom: 1px solid #000;
 `;
 
 export const WhoWeAreTitleAlt = styled.p`

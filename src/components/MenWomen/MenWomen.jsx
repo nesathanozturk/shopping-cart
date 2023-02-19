@@ -20,7 +20,7 @@ function MenWomen() {
         </Info>
         <Products>
           {products.slice(4, 8).map((product) => (
-            <ProductItem>
+            <ProductItem key={product.id}>
               <div>
                 <CardImg src={product.image} alt={product.title} />
                 <CardContent>
