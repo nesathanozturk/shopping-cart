@@ -108,7 +108,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const Basket = styled(BsFillBasketFill)`
-  font-size: 1.39rem;
+  font-size: 1.6rem;
 `;
 
 export const Hamburger = styled(GiHamburgerMenu)`
