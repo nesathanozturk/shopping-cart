@@ -19,6 +19,33 @@ export const Title = styled.h1`
   text-align: center;
 `;
 
+export const TitleAlt = styled.h3`
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  text-align: center;
+`;
+
+export const Input = styled.input`
+  background-color: #e6e6e6;
+  color: #403866;
+  width: 30%;
+  height: 42px;
+  margin-bottom: 20px;
+  padding: 0 20px 0 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+
+  &::placeholder {
+    font-size: 1rem;
+  }
+`;
+
 export const Products = styled.div`
   display: flex;
   justify-content: center;
@@ -82,5 +109,3 @@ export const CardButton = styled.button`
     background: #d68e46;
   }
 `;
-
-export const Wrapper = styled.div``;

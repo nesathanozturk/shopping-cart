@@ -88,7 +88,7 @@ export const NavLink = styled(Link)`
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #000;
+    background: #666;
     width: 0;
     height: 2px;
     transition: all 0.45s;
@@ -100,6 +100,10 @@ export const NavLink = styled(Link)`
 
   @media (max-width: 700px) {
     color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
   }
 `;
 

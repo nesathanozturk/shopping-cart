@@ -1,8 +1,10 @@
+import { useState } from "react";
 import {
   Section,
-  Wrapper,
   Info,
   Title,
+  TitleAlt,
+  Input,
   Products,
   ProductItem,
   CardImg,
@@ -14,15 +16,36 @@ import {
 import { products } from "../../assets/data";
 
 function Product() {
+  const [term, setTerm] = useState("");
+
   return (
     <Section>
-      <Wrapper>
+      <div>
         <Info>
           <Title>Products</Title>
+          <TitleAlt>What are you looking for?</TitleAlt>
+          <Input
+            type="text"
+            placeholder="Search"
+            value={term}
+            onChange={(e) => setTerm(e.target.value)}
+          />
         </Info>
         <Products>
-          {products.map((product) => (
-            <>
+          {products
+            .filter((product) => {
+              // Filter products by title.
+              if (term == "") {
+                return product;
+              } else if (
+                product.title
+                  .toLocaleLowerCase()
+                  .includes(term.toLocaleLowerCase())
+              ) {
+                return product;
+              }
+            })
+            .map((product) => (
               <ProductItem key={product.id}>
                 <div>
                   <CardImg src={product.image} alt={product.title} />
@@ -37,10 +60,9 @@ function Product() {
                   </CardContent>
                 </div>
               </ProductItem>
-            </>
-          ))}
+            ))}
         </Products>
-      </Wrapper>
+      </div>
     </Section>
   );
 }
