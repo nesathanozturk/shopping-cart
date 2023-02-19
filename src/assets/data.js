@@ -33,7 +33,7 @@ export const images = [
 export const products = [
   {
     id: 1,
-    title: "Red Lips",
+    title: "Red Lipstick",
     image:
       "https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80",
     price: 20,
