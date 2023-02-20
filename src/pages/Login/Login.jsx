@@ -13,7 +13,6 @@ import {
   ButtonContainer,
   Button,
 } from "./styles.jsx";
-import Footer from "../../components/Footer/Footer";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/features/authSlice";
 
@@ -51,7 +50,6 @@ function Login() {
           </Form>
         </Wrapper>
       </Container>
-      <Footer />
     </Section>
   );
 }
