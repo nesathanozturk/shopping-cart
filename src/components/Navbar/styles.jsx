@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { BsFillBasketFill } from "react-icons/bs";
+import { FaShoppingCart } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -58,6 +58,7 @@ export const NavItems = styled.div`
       height: 100%;
       transform: translateX(-100%);
       transition: all 0.45s;
+      z-index: 999;
     }
   }
 `;
@@ -69,6 +70,10 @@ export const Logo = styled.span`
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  @media (max-width: 768px) {
+    font-size: 29px;
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -104,11 +109,16 @@ export const NavLink = styled(Link)`
     &:hover {
       color: #fff;
     }
+
+    &:hover::before {
+      width: 0%;
+    }
   }
 `;
 
-export const Basket = styled(BsFillBasketFill)`
-  font-size: 1.6rem;
+export const Basket = styled(FaShoppingCart)`
+  font-size: 1.7rem;
+  margin-right: 15px;
 `;
 
 export const Hamburger = styled(GiHamburgerMenu)`
