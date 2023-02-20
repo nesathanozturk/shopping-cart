@@ -63,7 +63,7 @@ export const NavItems = styled.div`
   }
 `;
 
-export const Logo = styled.span`
+export const Logo = styled(Link)`
   margin: 15px;
   color: #f0a04b;
   font-size: 30px;

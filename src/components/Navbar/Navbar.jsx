@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <Nav>
       <div>
-        <Logo>Ozturk.</Logo>
+        <Logo to="/">Ozturk.</Logo>
       </div>
       <NavItems className={`nav-items ${isOpen && "open"}`}>
         <NavLink to="/">Home</NavLink>
