@@ -1,51 +1,5 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
-  width: 90%;
-  margin: 50px auto 60px auto;
-`;
-
-export const Info = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Title = styled.h1`
-  margin-bottom: 10px;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  text-align: center;
-`;
-
-export const TitleAlt = styled.h3`
-  color: #666;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  letter-spacing: 2px;
-  text-align: center;
-`;
-
-export const Input = styled.input`
-  background-color: #e6e6e6;
-  color: #403866;
-  width: 30%;
-  height: 42px;
-  margin-bottom: 20px;
-  padding: 0 20px 0 20px;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  outline: none;
-
-  &::placeholder {
-    font-size: 1rem;
-  }
-`;
-
 export const Products = styled.div`
   display: flex;
   justify-content: center;
@@ -69,6 +23,10 @@ export const ProductItem = styled.div`
   &:hover {
     transform: translateY(-0.5%);
   }
+
+  @media (max-width: 768px) {
+    width: 10.53rem;
+  }
 `;
 
 export const CardImg = styled.img`
@@ -78,18 +36,30 @@ export const CardImg = styled.img`
 
 export const CardContent = styled.div`
   padding: 0.5rem;
+
+  @media (max-width: 768px) {
+    padding: 0.3rem;
+  }
 `;
 
 export const CardTitle = styled.p`
   color: #3d3d3d;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export const CardPrice = styled.p`
   color: #666;
   font-size: 1rem;
   letter-spacing: 0.1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const CardButton = styled.button`
@@ -107,5 +77,10 @@ export const CardButton = styled.button`
   &:hover {
     transform: scale(1.02);
     background: #d68e46;
+  }
+
+  @media (max-width: 768px) {
+    width: 9em;
+    padding: 10px 10px;
   }
 `;
