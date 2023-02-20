@@ -5,17 +5,28 @@ import Products from "./pages/Products/Products";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Basket from "./pages/Basket/Basket";
 import NotFound404 from "./pages/NotFound404/NotFound404";
+import { useSelector } from "react-redux";
 
 function App() {
+  const isLogin = useSelector((state) => state.auth.Login);
+
   return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/products" element={<Products />} />
-      <Route path="/about" element={<AboutUs />} />
-      <Route path="/basket" element={<Basket />} />
-      <Route path="*" element={<NotFound404 />} />
-    </Routes>
+    <div>
+      {isLogin ? (
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/basket" element={<Basket />} />
+          <Route path="*" element={<NotFound404 />} />
+        </Routes>
+      ) : (
+        <>
+          <Login />
+        </>
+      )}
+    </div>
   );
 }
 

@@ -14,19 +14,27 @@ import {
   Button,
 } from "./styles.jsx";
 import Footer from "../../components/Footer/Footer";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/features/authSlice";
 
 function Login() {
+  const dispatch = useDispatch();
+
+  const handleSubmit = () => {
+    dispatch(login());
+  };
+
   return (
     <Section>
       <Container>
         <Wrapper>
           <Title>Log in</Title>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <InputContainer>
-              <Input type="text" placeholder="Username" />
+              <Input type="text" placeholder="Username" required />
             </InputContainer>
             <InputContainer>
-              <Input type="password" placeholder="Password" />
+              <Input type="password" placeholder="Password" required />
             </InputContainer>
             <Help>
               <CheckboxContainer>
@@ -38,7 +46,7 @@ function Login() {
               </div>
             </Help>
             <ButtonContainer>
-              <Button type="button">Log In</Button>
+              <Button type="submit">Log In</Button>
             </ButtonContainer>
           </Form>
         </Wrapper>
