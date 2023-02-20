@@ -49,6 +49,10 @@ export const Buttons = styled.div`
   gap: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+
+  @media (max-width: 553px) {
+    padding: 2px 10px;
+  }
 `;
 
 export const Button = styled.button`
