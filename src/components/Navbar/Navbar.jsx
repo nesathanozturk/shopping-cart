@@ -5,6 +5,7 @@ import {
   NavItems,
   NavLink,
   Basket,
+  User,
   Close,
   Hamburger,
 } from "./styles.jsx";
@@ -23,6 +24,9 @@ function Navbar() {
         <NavLink to="/about">About</NavLink>
         <NavLink to="/basket">
           <Basket />
+        </NavLink>
+        <NavLink>
+          <User />
         </NavLink>
       </NavItems>
       <div

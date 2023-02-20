@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -9,6 +10,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
 
   .nav-toggle {
@@ -68,7 +70,6 @@ export const Logo = styled(Link)`
   color: #f0a04b;
   font-size: 30px;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 2px;
 
   @media (max-width: 768px) {
@@ -119,6 +120,11 @@ export const NavLink = styled(Link)`
 export const Basket = styled(FaShoppingCart)`
   font-size: 1.7rem;
   margin-right: 15px;
+`;
+
+export const User = styled(FaUser)`
+  font-size: 1.7rem;
+  margin-right: 10px;
 `;
 
 export const Hamburger = styled(GiHamburgerMenu)`
