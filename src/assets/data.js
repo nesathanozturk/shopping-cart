@@ -45,6 +45,7 @@ export const products = [
     image:
       "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1399&q=80",
     price: 50,
+    salePrice: 40,
     amount: 1,
   },
   {
@@ -53,6 +54,7 @@ export const products = [
     image:
       "https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
     price: 100,
+    salePrice: 60,
     amount: 1,
   },
   {
@@ -61,6 +63,7 @@ export const products = [
     image:
       "https://images.unsplash.com/photo-1503341504253-dff4815485f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     price: 30,
+    salePrice: 10,
     amount: 1,
   },
   {

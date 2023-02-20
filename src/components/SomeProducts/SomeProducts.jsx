@@ -12,12 +12,12 @@ import {
 } from "./styles.jsx";
 import { products } from "../../assets/data";
 
-function Sale() {
+function SomeProducts() {
   return (
     <Section>
       <div>
         <Info>
-          <Title>On Sale Products</Title>
+          <Title>Some Products</Title>
         </Info>
         <Products>
           {products.slice(1, 4).map((product) => (
@@ -40,4 +40,4 @@ function Sale() {
   );
 }
 
-export default Sale;
+export default SomeProducts;
