@@ -5,6 +5,7 @@ export const BasketCard = styled.div`
   width: 100%;
   display: flex;
   position: relative;
+  margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 12px;

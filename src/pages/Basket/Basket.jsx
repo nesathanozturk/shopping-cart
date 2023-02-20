@@ -7,10 +7,16 @@ import { useSelector } from "react-redux";
 const Section = styled.section`
   background: #fff;
   max-width: 100%;
+  margin-top: 20px;
   padding: 20px;
-  border: 1px solid #e6e6e6;
   border-radius: 12px;
   transition: 0.5s;
+`;
+
+const Total = styled.p`
+  margin-top: 10px;
+  font-size: 1.4rem;
+  text-align: right;
 `;
 
 function Basket() {
@@ -37,10 +43,11 @@ function Basket() {
             totalPrice={product.totalPrice}
           />
         ))}
+        <div className="total">
+          <Total>Total Amount:&nbsp; {total} &#8378;</Total>
+        </div>
       </Section>
-      {total}
-      {amount}
-      <Footer />
+      <Footer className="footer" />
     </>
   );
 }

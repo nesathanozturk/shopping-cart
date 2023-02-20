@@ -11,7 +11,7 @@ import {
 } from "./styles.jsx";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import basketActions from "../../redux/features/basketSlice";
+import { basketActions } from "../../redux/features/basketSlice";
 
 function BasketItem({ id, image, title, price, amount, totalPrice }) {
   const dispatch = useDispatch();
@@ -22,6 +22,14 @@ function BasketItem({ id, image, title, price, amount, totalPrice }) {
 
   const handleRemoveFromBasket = () => {
     dispatch(basketActions.removeFromBasket(id));
+  };
+
+  const handleRemoveItem = () => {
+    dispatch(basketActions.removeItem(id));
+  };
+
+  const handleClearItems = () => {
+    dispatch(basketActions.clearItems(id));
   };
 
   return (
@@ -43,7 +51,7 @@ function BasketItem({ id, image, title, price, amount, totalPrice }) {
             </Button>
           </Buttons>
         </Details>
-        <button>
+        <button onClick={handleRemoveItem}>
           <Remove />
         </button>
       </BasketCard>

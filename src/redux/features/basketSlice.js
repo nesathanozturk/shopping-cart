@@ -40,10 +40,12 @@ export const basketSlice = createSlice({
       }
     },
     removeItem: (state, action) => {
-      return state.filter((item) => item.id !== action.payload.id);
+      const id = action.payload;
+      state.basketItems = state.basketItems.filter((item) => item.id !== id);
     },
     clearBasket: (state, action) => {
-      return state.filter((item) => item.id !== action.payload.id);
+      const id = action.payload;
+      state.basketItems = state.basketItems.filter((item) => item.id && id);
     },
   },
 });
