@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Section,
   Container,
@@ -17,10 +18,13 @@ import { useDispatch } from "react-redux";
 import { login } from "../../redux/features/authSlice";
 
 function Login() {
+  const [username, setUsername] = useState("");
+
   const dispatch = useDispatch();
 
   const handleSubmit = () => {
     dispatch(login());
+    alert(`Login successful. Welcome ${username}!`);
   };
 
   return (
@@ -30,7 +34,13 @@ function Login() {
           <Title>Log in</Title>
           <Form onSubmit={handleSubmit}>
             <InputContainer>
-              <Input type="text" placeholder="Username" required />
+              <Input
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
             </InputContainer>
             <InputContainer>
               <Input type="password" placeholder="Password" required />
@@ -41,7 +51,7 @@ function Login() {
                 <Label>Remember me</Label>
               </CheckboxContainer>
               <div>
-                <Link href="/">Forgot?</Link>
+                <Link href="#">Forgot?</Link>
               </div>
             </Help>
             <ButtonContainer>
