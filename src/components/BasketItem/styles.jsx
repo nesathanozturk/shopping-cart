@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MdOutlineRemoveCircleOutline } from "react-icons/md";
+import { breakpoints } from "../../theme";
 
 export const BasketCard = styled.div`
   width: 100%;
@@ -50,7 +51,7 @@ export const Buttons = styled.div`
   border-radius: 5px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
 
-  @media (max-width: 553px) {
+  @media ${breakpoints.lg} {
     padding: 2px 10px;
   }
 `;

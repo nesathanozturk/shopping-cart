@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   Nav,
   Logo,
-  NavItems,
   NavLink,
   Basket,
   User,
@@ -18,7 +17,7 @@ function Navbar() {
       <div>
         <Logo to="/">Ozturk.</Logo>
       </div>
-      <NavItems className={`nav-items ${isOpen && "open"}`}>
+      <div className={`nav-items ${isOpen && "open"}`}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/products">Products</NavLink>
         <NavLink to="/about">About</NavLink>
@@ -28,7 +27,7 @@ function Navbar() {
         <NavLink>
           <User />
         </NavLink>
-      </NavItems>
+      </div>
       <div
         className={`nav-toggle ${isOpen && "open"}`}
         onClick={() => setIsOpen(!isOpen)}

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../theme";
 
 export const Section = styled.section`
   width: 90%;
@@ -18,7 +19,7 @@ export const Title = styled.h1`
   letter-spacing: 2px;
   text-align: center;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 2.1rem;
   }
 `;
@@ -57,8 +58,16 @@ export const ProductItem = styled.div`
     box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
   }
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     width: 10.53rem;
+  }
+
+  @media ${breakpoints.md} {
+    width: 10.2rem;
+  }
+
+  @media (max-width: 413px) {
+    width: 9rem;
   }
 `;
 
@@ -70,7 +79,7 @@ export const CardImg = styled.img`
 export const CardContent = styled.div`
   padding: 0.3rem;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     padding: 0.2rem;
   }
 `;
@@ -80,7 +89,7 @@ export const CardTitle = styled.p`
   letter-spacing: 0.1rem;
   color: #3d3d3d;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 1.1rem;
   }
 `;
@@ -90,7 +99,7 @@ export const CardPrice = styled.p`
   letter-spacing: 0.1rem;
   color: #666;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 0.9rem;
   }
 `;

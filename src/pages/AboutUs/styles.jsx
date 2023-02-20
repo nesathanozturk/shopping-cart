@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../theme";
 
 export const Section = styled.section`
   width: 100%;
@@ -24,7 +25,7 @@ export const Title = styled.span`
   letter-spacing: 0.3rem;
   border-bottom: 1px solid #000;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 2.2rem;
   }
 `;
@@ -33,7 +34,7 @@ export const TitleAlt = styled.p`
   color: #f0a04b;
   font-size: 1.4rem;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 1.1rem;
   }
 `;
@@ -44,7 +45,7 @@ export const WhoWeAreTitle = styled.span`
   letter-spacing: 0.3rem;
   border-bottom: 1px solid #000;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 2.2rem;
   }
 `;
@@ -55,7 +56,7 @@ export const WhoWeAreTitleAlt = styled.p`
   line-height: 1.5;
   font-weight: 100;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 1rem;
   }
 `;

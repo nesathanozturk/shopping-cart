@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../theme";
 
 export const Section = styled.section`
   width: 100%;
@@ -22,7 +23,7 @@ export const Image = styled.img`
 export const ErrorText = styled.h1`
   padding: 20px;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 1.3rem;
   }
 `;
@@ -31,7 +32,7 @@ export const Text = styled.p`
   margin-bottom: 40px;
   font-size: 20px;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 18px;
   }
 `;
@@ -50,7 +51,7 @@ export const Button = styled.div`
       background: #d3883d;
     }
 
-    @media (max-width: 768px) {
+    @media ${breakpoints.xl} {
       padding: 10px;
       font-size: 1.2rem;
     }

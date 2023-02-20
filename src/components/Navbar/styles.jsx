@@ -4,6 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import { breakpoints } from "../../theme";
 
 export const Nav = styled.nav`
   height: 90px;
@@ -48,11 +49,6 @@ export const Nav = styled.nav`
   }
 `;
 
-export const NavItems = styled.div`
-  @media (max-width: 700px) {
-  }
-`;
-
 export const Logo = styled(Link)`
   margin: 15px;
   color: #f0a04b;
@@ -60,7 +56,7 @@ export const Logo = styled(Link)`
   font-weight: 700;
   letter-spacing: 2px;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 29px;
   }
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../theme";
 
 export const Products = styled.div`
   display: flex;
@@ -24,11 +25,11 @@ export const ProductItem = styled.div`
     transform: translateY(-0.5%);
   }
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     width: 10.53rem;
   }
 
-  @media (max-width: 423px) {
+  @media ${breakpoints.md} {
     width: 9rem;
   }
 `;
@@ -41,11 +42,11 @@ export const CardImg = styled.img`
 export const CardContent = styled.div`
   padding: 0.5rem;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     padding: 0.3rem;
   }
 
-  @media (max-width: 423px) {
+  @media ${breakpoints.md} {
     padding: 0.3rem;
   }
 `;
@@ -55,7 +56,7 @@ export const CardTitle = styled.p`
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 1rem;
   }
 `;
@@ -65,7 +66,7 @@ export const CardPrice = styled.p`
   font-size: 1rem;
   letter-spacing: 0.1rem;
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     font-size: 0.9rem;
   }
 `;
@@ -87,12 +88,12 @@ export const CardButton = styled.button`
     background: #d68e46;
   }
 
-  @media (max-width: 768px) {
+  @media ${breakpoints.xl} {
     width: 9em;
     padding: 10px 10px;
   }
 
-  @media (max-width: 423px) {
+  @media ${breakpoints.md} {
     width: 7.9em;
     padding: 8px 8px;
     font-size: 0.93rem;

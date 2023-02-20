@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../theme";
 
 export const Section = styled.section`
   width: 90%;
@@ -45,7 +46,7 @@ export const Input = styled.input`
     font-size: 1rem;
   }
 
-  @media (max-width: 428px) {
+  @media ${breakpoints.md} {
     width: 18rem;
   }
 `;

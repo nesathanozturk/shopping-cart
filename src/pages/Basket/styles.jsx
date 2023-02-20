@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { RiErrorWarningFill } from "react-icons/ri";
+import { breakpoints } from "../../theme";
 
 export const Section = styled.section`
   background: #fff;
@@ -32,7 +33,7 @@ export const ClearButton = styled.button`
     color: #fff;
   }
 
-  @media (max-width: 375px) {
+  @media ${breakpoints.sm} {
     width: 100px;
     padding: 5px 5px;
   }
@@ -43,7 +44,7 @@ export const Total = styled.p`
   font-size: 1.4rem;
   text-align: right;
 
-  @media (max-width: 375px) {
+  @media ${breakpoints.sm} {
     font-size: 5.5vw;
   }
 `;
@@ -58,7 +59,7 @@ export const WarningContainer = styled.div`
 export const WarningText = styled.p`
   font-size: 1.4rem;
 
-  @media (max-width: 379px) {
+  @media ${breakpoints.sm}} {
     font-size: 5.5vw;
   }
 `;
