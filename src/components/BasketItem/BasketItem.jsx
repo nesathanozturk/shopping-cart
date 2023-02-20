@@ -28,10 +28,6 @@ function BasketItem({ id, image, title, price, amount, totalPrice }) {
     dispatch(basketActions.removeItem(id));
   };
 
-  const handleClearItems = () => {
-    dispatch(basketActions.clearBasket(id));
-  };
-
   return (
     <>
       <BasketCard>
