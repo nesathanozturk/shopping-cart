@@ -1,6 +1,5 @@
 import Navbar from "../../components/Navbar/Navbar";
 import BasketItem from "../../components/BasketItem/BasketItem";
-import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 
@@ -43,11 +42,10 @@ function Basket() {
             totalPrice={product.totalPrice}
           />
         ))}
-        <div className="total">
+        <div>
           <Total>Total Amount:&nbsp; {total} &#8378;</Total>
         </div>
       </Section>
-      <Footer className="footer" />
     </>
   );
 }
