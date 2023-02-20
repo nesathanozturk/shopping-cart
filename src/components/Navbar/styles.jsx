@@ -35,7 +35,8 @@ export const Nav = styled.nav`
       flex-direction: column;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
+      text-align: center;
       transform: translateX(-100%);
       z-index: 999;
       transition: all 0.45s;
@@ -49,19 +50,6 @@ export const Nav = styled.nav`
 
 export const NavItems = styled.div`
   @media (max-width: 700px) {
-    .nav-items {
-      background: #fff;
-      position: absolute;
-      top: 60px;
-      display: flex;
-      flex-direction: column;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform: translateX(-100%);
-      transition: all 0.45s;
-      z-index: 999;
-    }
   }
 `;
 

@@ -27,6 +27,10 @@ export const ProductItem = styled.div`
   @media (max-width: 768px) {
     width: 10.53rem;
   }
+
+  @media (max-width: 423px) {
+    width: 9rem;
+  }
 `;
 
 export const CardImg = styled.img`
@@ -38,6 +42,10 @@ export const CardContent = styled.div`
   padding: 0.5rem;
 
   @media (max-width: 768px) {
+    padding: 0.3rem;
+  }
+
+  @media (max-width: 423px) {
     padding: 0.3rem;
   }
 `;
@@ -82,5 +90,11 @@ export const CardButton = styled.button`
   @media (max-width: 768px) {
     width: 9em;
     padding: 10px 10px;
+  }
+
+  @media (max-width: 423px) {
+    width: 7.9em;
+    padding: 8px 8px;
+    font-size: 0.93rem;
   }
 `;
