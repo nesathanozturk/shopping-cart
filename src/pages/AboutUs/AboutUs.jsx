@@ -4,7 +4,6 @@ import {
   Top,
   TitleBox,
   Title,
-  TitleAltBox,
   TitleAlt,
   WhoWeAreTitle,
   WhoWeAreTitleAlt,
@@ -21,13 +20,13 @@ function AboutUs() {
           <TitleBox>
             <Title>About Us</Title>
           </TitleBox>
-          <TitleAltBox>
+          <div>
             <TitleAlt>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
               modi nobis eos doloremque id facere ex, sed sint dolorem placeat
               maxime ducimus autem rem quidem.
             </TitleAlt>
-          </TitleAltBox>
+          </div>
         </Top>
         <div>
           <TitleBox>

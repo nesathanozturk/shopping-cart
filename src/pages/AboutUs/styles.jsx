@@ -23,11 +23,19 @@ export const Title = styled.span`
   font-size: 3rem;
   letter-spacing: 0.3rem;
   border-bottom: 1px solid #000;
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
 `;
 
 export const TitleAlt = styled.p`
   color: #f0a04b;
   font-size: 1.4rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const WhoWeAreTitle = styled.span`
@@ -35,6 +43,10 @@ export const WhoWeAreTitle = styled.span`
   font-size: 3rem;
   letter-spacing: 0.3rem;
   border-bottom: 1px solid #000;
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
 `;
 
 export const WhoWeAreTitleAlt = styled.p`
@@ -42,6 +54,8 @@ export const WhoWeAreTitleAlt = styled.p`
   text-align: left;
   line-height: 1.5;
   font-weight: 100;
-`;
 
-export const TitleAltBox = styled.div``;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+`;
