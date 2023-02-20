@@ -59,7 +59,7 @@ export const WarningContainer = styled.div`
 export const WarningText = styled.p`
   font-size: 1.4rem;
 
-  @media ${breakpoints.sm}} {
+  @media ${breakpoints.sm} {
     font-size: 5.5vw;
   }
 `;

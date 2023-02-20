@@ -35,6 +35,7 @@ function Basket() {
         <Section>
           {basketProducts.map((product) => (
             <BasketItem
+              key={product.id}
               id={product.id}
               image={product.image}
               title={product.title}
