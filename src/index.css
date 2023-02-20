@@ -1,5 +1,5 @@
 /* Font */
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 /* Reset */
 *,
@@ -15,7 +15,7 @@ html,
 body {
   position: relative;
   height: 100%;
-  font-family: "Heebo", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 a {
