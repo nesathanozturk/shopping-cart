@@ -17,6 +17,10 @@ export const Title = styled.h1`
   font-size: 2.5rem;
   letter-spacing: 2px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2.1rem;
+  }
 `;
 
 export const Description = styled.p`
@@ -52,6 +56,10 @@ export const ProductItem = styled.div`
     transform: translateY(-0.5%);
     box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
   }
+
+  @media (max-width: 768px) {
+    width: 12rem;
+  }
 `;
 
 export const CardImg = styled.img`
@@ -67,10 +75,18 @@ export const CardTitle = styled.p`
   font-size: 1.3rem;
   letter-spacing: 0.1rem;
   color: #3d3d3d;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const CardPrice = styled.p`
   font-size: 1rem;
   letter-spacing: 0.1rem;
   color: #666;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
