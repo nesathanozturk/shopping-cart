@@ -16,6 +16,7 @@ import {
 } from "./styles.jsx";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/features/authSlice";
+import { saveUsername } from "../../redux/features/userSlice";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -24,7 +25,7 @@ function Login() {
 
   const handleSubmit = () => {
     dispatch(login());
-    alert(`Login successful. Welcome ${username}!`);
+    dispatch(saveUsername(username)); // We recieve the value from the state then we sent it to the Redux state that we created.
   };
 
   return (

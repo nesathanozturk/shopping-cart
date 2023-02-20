@@ -34,6 +34,15 @@ export const Title = styled.h1`
   text-align: center;
 `;
 
+export const Username = styled.h1`
+  color: #403866;
+  width: 100%;
+  padding-bottom: 30px;
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+`;
+
 export const ImageContainer = styled.div`
   width: 100%;
   display: flex;
