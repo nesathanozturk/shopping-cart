@@ -29,7 +29,7 @@ function BasketItem({ id, image, title, price, amount, totalPrice }) {
   };
 
   const handleClearItems = () => {
-    dispatch(basketActions.clearItems(id));
+    dispatch(basketActions.clearBasket(id));
   };
 
   return (

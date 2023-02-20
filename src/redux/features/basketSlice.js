@@ -45,7 +45,7 @@ export const basketSlice = createSlice({
     },
     clearBasket: (state, action) => {
       const id = action.payload;
-      state.basketItems = state.basketItems.filter((item) => item.id && id);
+      state.basketItems = state.basketItems.filter((item) => item.id === id);
     },
   },
 });
