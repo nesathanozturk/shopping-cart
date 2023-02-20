@@ -28,7 +28,7 @@ export const basketSlice = createSlice({
         state.totalAmount++;
       }
     },
-    removeFromBasket: (state, action) => {
+    decreaseAmount: (state, action) => {
       const id = action.payload;
       const exitstingItem = state.basketItems.find((item) => item.id === id);
       if (exitstingItem.amount === 1) {
@@ -39,7 +39,7 @@ export const basketSlice = createSlice({
         exitstingItem.totalPrice -= exitstingItem.price;
       }
     },
-    removeItem: (state, action) => {
+    removeItemFromBasket: (state, action) => {
       const id = action.payload;
       state.basketItems = state.basketItems.filter((item) => item.id !== id);
     },

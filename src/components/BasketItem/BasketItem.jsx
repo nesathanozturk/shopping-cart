@@ -20,12 +20,12 @@ function BasketItem({ id, image, title, price, amount, totalPrice }) {
     dispatch(basketActions.addToBasket({ id, image, title, price }));
   };
 
-  const handleRemoveFromBasket = () => {
-    dispatch(basketActions.removeFromBasket(id));
+  const handleDecreaseAmount = () => {
+    dispatch(basketActions.decreaseAmount(id));
   };
 
   const handleRemoveItem = () => {
-    dispatch(basketActions.removeItem(id));
+    dispatch(basketActions.removeItemFromBasket(id));
   };
 
   return (
@@ -42,7 +42,7 @@ function BasketItem({ id, image, title, price, amount, totalPrice }) {
               <AiOutlinePlus />
             </Button>
             <Amount>{amount}</Amount>
-            <Button onClick={handleRemoveFromBasket}>
+            <Button onClick={handleDecreaseAmount}>
               <AiOutlineMinus />
             </Button>
           </Buttons>
