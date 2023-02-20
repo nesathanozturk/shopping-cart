@@ -24,7 +24,7 @@ function Navbar() {
         <NavLink to="/basket">
           <Basket />
         </NavLink>
-        <NavLink>
+        <NavLink to="/profile">
           <User />
         </NavLink>
       </div>
