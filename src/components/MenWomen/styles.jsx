@@ -58,7 +58,7 @@ export const ProductItem = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 12rem;
+    width: 10.53rem;
   }
 `;
 
@@ -69,6 +69,10 @@ export const CardImg = styled.img`
 
 export const CardContent = styled.div`
   padding: 0.3rem;
+
+  @media (max-width: 768px) {
+    padding: 0.2rem;
+  }
 `;
 
 export const CardTitle = styled.p`
