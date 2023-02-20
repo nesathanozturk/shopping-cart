@@ -16,7 +16,7 @@ export const Img = styled.img`
 `;
 
 export const SliderButtons = styled.button`
-  width: 50px;
+  width: 100%;
   height: 10%;
   color: red;
   position: absolute;
@@ -32,7 +32,7 @@ export const NextButton = styled.button`
   font-size: 2rem;
   position: absolute;
   top: 100px;
-  right: -1210px;
+  right: 20px;
 `;
 
 export const PrevButton = styled.button`
