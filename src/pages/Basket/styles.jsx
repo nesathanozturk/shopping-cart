@@ -31,12 +31,21 @@ export const ClearButton = styled.button`
     background: red;
     color: #fff;
   }
+
+  @media (max-width: 375px) {
+    width: 100px;
+    padding: 5px 5px;
+  }
 `;
 
 export const Total = styled.p`
   margin-top: 10px;
   font-size: 1.4rem;
   text-align: right;
+
+  @media (max-width: 375px) {
+    font-size: 5.5vw;
+  }
 `;
 
 export const WarningContainer = styled.div`
