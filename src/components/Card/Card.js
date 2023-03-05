@@ -1,6 +1,5 @@
-import React from "react";
-import products from "../../config/data";
-import ProductCard from "../../components/ProductCard/ProductCard";
+import products from "../../data/data";
+import ProductCard from "../ProductCard/ProductCard";
 import "./Card.css";
 
 function Card({ addProductAtBasket }) {

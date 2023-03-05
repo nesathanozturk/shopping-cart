@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Navbar from "../../pages/Navbar/Navbar";
-import Card from "../../pages/Card/Card";
-import Products from "../Products/Products";
+import { useState } from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import Card from "../../components/Card/Card";
+import Basket from "../Basket/Basket";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Home.css";
@@ -24,7 +24,7 @@ function Home() {
     <main className="animate__animated animate__fadeInDown">
       <Navbar basketItemsLength={basketItems.length} setModal={setModal} />
       {modal ? (
-        <Products basketItems={basketItems} setBasketItems={setBasketItems} />
+        <Basket basketItems={basketItems} setBasketItems={setBasketItems} />
       ) : (
         <Card addProductAtBasket={addProductAtBasket} />
       )}

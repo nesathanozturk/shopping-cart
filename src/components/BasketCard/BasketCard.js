@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { CgAdd } from "react-icons/cg";
 import { CiCircleRemove } from "react-icons/ci";
 import { BiTrash } from "react-icons/bi";
