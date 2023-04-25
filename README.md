@@ -5,6 +5,7 @@
 ## 🧰 Technologies Used
 
 - React JS
+- React Router
 - Redux Toolkit
 - Styled Components for styles
 - Icons for React Icons
