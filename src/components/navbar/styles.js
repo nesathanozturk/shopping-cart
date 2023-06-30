@@ -13,6 +13,7 @@ export const Nav = styled.nav`
 
   @media ${breakpoints.sm} {
     flex-direction: column;
+    padding: 0.5rem;
   }
 `;
 
@@ -25,6 +26,10 @@ export const Logo = styled(Link)`
 
   @media ${breakpoints.xl} {
     font-size: 25px;
+  }
+
+  @media ${breakpoints.md} {
+    font-size: 22px;
   }
 `;
 
