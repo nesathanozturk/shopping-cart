@@ -1,6 +1,6 @@
 <h1>About</h1>
 
-<p>This repository is my simple e-commerce project.<p>
+<p>This repository is Shopping Cart project.<p>
 
 ## 🧰 Technologies Used
 
