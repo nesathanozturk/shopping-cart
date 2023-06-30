@@ -47,7 +47,6 @@ function Home() {
           </Items>
         </div>
       </Section>
-      <Footer />
     </>
   );
 }
