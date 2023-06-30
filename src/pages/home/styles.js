@@ -13,13 +13,6 @@ export const Info = styled.div`
   align-items: center;
 `;
 
-export const Title = styled.h1`
-  margin-bottom: 10px;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  text-align: center;
-`;
-
 export const TitleAlt = styled.h3`
   color: #666;
   margin-top: 10px;

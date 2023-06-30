@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navbar from "../../components/navbar";
 import ProductCard from "../../components/product-card";
 import { products } from "../../assets/data";
-import { Section, Info, Title, TitleAlt, Input, Items } from "./styles";
+import { Section, Info, TitleAlt, Input, Items } from "./styles";
 
 function Home() {
   const [term, setTerm] = useState("");
@@ -13,7 +13,6 @@ function Home() {
       <Section>
         <div>
           <Info>
-            <Title>Products</Title>
             <TitleAlt>What are you looking for?</TitleAlt>
             <Input
               type="text"
