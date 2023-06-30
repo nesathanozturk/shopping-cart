@@ -1,4 +1,4 @@
-import { Nav, Logo, NavLink, Basket, User, Close, Hamburger } from "./styles";
+import { Nav, Logo, NavLink, Basket } from "./styles";
 
 function Navbar() {
   return (
@@ -6,10 +6,12 @@ function Navbar() {
       <div>
         <Logo to="/">Shopping Cart</Logo>
       </div>
-      <NavLink to="/">Products</NavLink>
-      <NavLink to="/basket">
-        <Basket />
-      </NavLink>
+      <div>
+        <NavLink to="/">Products</NavLink>
+        <NavLink to="/basket">
+          <Basket />
+        </NavLink>
+      </div>
     </Nav>
   );
 }
