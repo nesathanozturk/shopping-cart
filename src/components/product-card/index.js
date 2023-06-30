@@ -5,11 +5,11 @@ import {
   CardTitle,
   CardPrice,
   CardButton,
-} from "./styles.jsx";
+} from "./styles";
 import { useDispatch } from "react-redux";
-import { basketActions } from "../../redux/features/basketSlice";
+import { basketActions } from "../../store/slices/basketSlice";
 
-function Product({ id, image, title, price }) {
+function ProductCard({ id, image, title, price }) {
   const dispatch = useDispatch();
 
   const addToBasket = () => {
@@ -38,4 +38,4 @@ function Product({ id, image, title, price }) {
   );
 }
 
-export default Product;
+export default ProductCard;

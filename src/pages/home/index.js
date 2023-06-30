@@ -1,11 +1,10 @@
 import { useState } from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import ProductItem from "../../components/ProductItem/ProductItem";
-import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/navbar";
+import ProductCard from "../../components/product-card";
 import { products } from "../../assets/data";
-import { Section, Info, Title, TitleAlt, Input, Items } from "./styles.jsx";
+import { Section, Info, Title, TitleAlt, Input, Items } from "./styles";
 
-function Products() {
+function Home() {
   const [term, setTerm] = useState("");
 
   return (
@@ -26,7 +25,6 @@ function Products() {
           <Items>
             {products
               .filter((product) => {
-                // Filter products by title.
                 if (term === "") {
                   return product;
                 } else if (
@@ -38,7 +36,7 @@ function Products() {
                 }
               })
               .map((product) => (
-                <ProductItem
+                <ProductCard
                   key={product.id}
                   id={product.id}
                   image={product.image}
@@ -54,4 +52,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Home;

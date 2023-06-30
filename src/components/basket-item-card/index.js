@@ -8,12 +8,12 @@ import {
   Button,
   Amount,
   Remove,
-} from "./styles.jsx";
+} from "./styles";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { basketActions } from "../../redux/features/basketSlice";
+import { basketActions } from "../../store/slices/basketSlice";
 
-function BasketItem({ id, image, title, price, amount, totalPrice }) {
+function BasketItemCard({ id, image, title, price, amount, totalPrice }) {
   const dispatch = useDispatch();
 
   const handleAddToBasket = () => {
@@ -55,4 +55,4 @@ function BasketItem({ id, image, title, price, amount, totalPrice }) {
   );
 }
 
-export default BasketItem;
+export default BasketItemCard;
