@@ -10,6 +10,10 @@ export const Nav = styled.nav`
   align-items: center;
   position: relative;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+
+  @media ${breakpoints.sm} {
+    flex-direction: column;
+  }
 `;
 
 export const Logo = styled(Link)`
@@ -20,7 +24,7 @@ export const Logo = styled(Link)`
   letter-spacing: 2px;
 
   @media ${breakpoints.xl} {
-    font-size: 29px;
+    font-size: 25px;
   }
 `;
 
