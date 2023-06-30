@@ -62,6 +62,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const Basket = styled(FaShoppingCart)`
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   margin-right: 15px;
+  padding-top: 0.5rem;
 `;
