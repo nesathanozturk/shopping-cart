@@ -1,7 +1,7 @@
-import Navbar from "../../components/Navbar/Navbar";
-import BasketItem from "../../components/BasketItem/BasketItem";
+import Navbar from "../../components/navbar";
+import BasketItemCard from "../../components/basket-item-card";
 import { useSelector, useDispatch } from "react-redux";
-import { basketActions } from "../../redux/features/basketSlice";
+import { basketActions } from "../../store/slices/basketSlice";
 import {
   Section,
   TotalAmount,
@@ -34,7 +34,7 @@ function Basket() {
       {basketProducts.length > 0 ? (
         <Section>
           {basketProducts.map((product) => (
-            <BasketItem
+            <BasketItemCard
               key={product.id}
               id={product.id}
               image={product.image}
