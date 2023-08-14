@@ -11,7 +11,9 @@ import {
   CardButton,
 } from "./styles";
 
-function ProductCard({ id, image, title, price }) {
+function ProductCard({ product }) {
+  const { id, image, title, price } = product;
+
   const dispatch = useDispatch();
 
   const addToBasket = () => {
@@ -20,19 +22,17 @@ function ProductCard({ id, image, title, price }) {
 
   return (
     <>
-      <ProductItem key={id}>
-        <div>
-          <CardImg src={image} alt={title} />
-          <CardContent>
-            <CardTitle>{title}</CardTitle>
-          </CardContent>
-          <CardContent>
-            <CardPrice>&#x24;{price}</CardPrice>
-          </CardContent>
-          <CardContent>
-            <CardButton onClick={addToBasket}>Add to Basket</CardButton>
-          </CardContent>
-        </div>
+      <ProductItem>
+        <CardImg src={image} alt={title} />
+        <CardContent>
+          <CardTitle>{title}</CardTitle>
+        </CardContent>
+        <CardContent>
+          <CardPrice>&#x24;{price}</CardPrice>
+        </CardContent>
+        <CardContent>
+          <CardButton onClick={addToBasket}>Add to Basket</CardButton>
+        </CardContent>
       </ProductItem>
     </>
   );
