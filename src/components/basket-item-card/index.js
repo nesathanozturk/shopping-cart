@@ -1,3 +1,8 @@
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+
+import { basketActions } from "../../store/slices/basketSlice";
+
 import {
   BasketCard,
   Details,
@@ -9,9 +14,6 @@ import {
   Amount,
   Remove,
 } from "./styles";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { useDispatch } from "react-redux";
-import { basketActions } from "../../store/slices/basketSlice";
 
 function BasketItemCard({ id, image, title, price, amount, totalPrice }) {
   const dispatch = useDispatch();

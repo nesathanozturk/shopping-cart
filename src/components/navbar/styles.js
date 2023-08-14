@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+
 import { breakpoints } from "../../theme";
 
 export const Nav = styled.nav`

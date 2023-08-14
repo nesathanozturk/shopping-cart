@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { MdOutlineRemoveCircleOutline } from "react-icons/md";
+
 import { breakpoints } from "../../theme";
 
 export const BasketCard = styled.div`
-  width: 100%;
   display: flex;
   position: relative;
   margin-bottom: 20px;
