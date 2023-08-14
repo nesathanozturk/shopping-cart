@@ -15,35 +15,35 @@ import {
   Remove,
 } from "./styles";
 
-function BasketItemCard({ id, image, title, price, amount, totalPrice }) {
+function BasketItemCard({ basketProducts }) {
   const dispatch = useDispatch();
 
-  const handleAddToBasket = () => {
-    dispatch(basketActions.addToBasket({ id, image, title, price }));
-  };
+  const renderedBasketProducts = basketProducts.map((product) => {
+    const handleAddToBasket = () => {
+      dispatch(basketActions.addToBasket(product));
+    };
 
-  const handleDecreaseAmount = () => {
-    dispatch(basketActions.decreaseAmount(id));
-  };
+    const handleDecreaseAmount = () => {
+      dispatch(basketActions.decreaseAmount(product.id));
+    };
 
-  const handleRemoveItem = () => {
-    dispatch(basketActions.removeItemFromBasket(id));
-  };
+    const handleRemoveItem = () => {
+      dispatch(basketActions.removeItemFromBasket(product.id));
+    };
 
-  return (
-    <>
-      <BasketCard>
+    return (
+      <BasketCard key={product.id}>
         <div>
-          <Image src={image} alt={title} />
+          <Image src={product.image} alt={product.title} />
         </div>
         <Details>
-          <Title>{title}</Title>
-          <Price>&#x24;{price}</Price>
+          <Title>{product.title}</Title>
+          <Price>&#x24;{product.price}</Price>
           <Buttons>
             <Button onClick={handleAddToBasket}>
               <AiOutlinePlus />
             </Button>
-            <Amount>{amount}</Amount>
+            <Amount>{product.amount}</Amount>
             <Button onClick={handleDecreaseAmount}>
               <AiOutlineMinus />
             </Button>
@@ -53,8 +53,10 @@ function BasketItemCard({ id, image, title, price, amount, totalPrice }) {
           <Remove />
         </button>
       </BasketCard>
-    </>
-  );
+    );
+  });
+
+  return renderedBasketProducts;
 }
 
 export default BasketItemCard;

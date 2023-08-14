@@ -1,30 +1,24 @@
-import Navbar from "../../components/navbar";
-import BasketItemCard from "../../components/basket-item-card";
 import { useSelector, useDispatch } from "react-redux";
+
+import BasketItemCard from "../../components/basket-item-card";
+import Navbar from "../../components/navbar";
+import WarningText from "../../components/warning-text";
+
 import { basketActions } from "../../store/slices/basketSlice";
-import {
-  Section,
-  TotalAmount,
-  ClearButton,
-  Total,
-  WarningContainer,
-  WarningText,
-  WarningIcon,
-} from "./styles";
+
+import { Section, TotalAmount, ClearButton, Total } from "./styles";
 
 function Basket() {
   const dispatch = useDispatch();
+
+  const basketProducts = useSelector((state) => state.basket.basketItems);
 
   const handleClearItems = (id) => {
     dispatch(basketActions.clearBasket(id));
   };
 
-  const basketProducts = useSelector((state) => state.basket.basketItems);
-  const amount = useSelector((state) => state.basket.totalAmount);
-
   let total = 0;
-  const Items = useSelector((state) => state.basket.basketItems);
-  Items.forEach((product) => {
+  basketProducts.forEach((product) => {
     total += product.totalPrice;
   });
 
@@ -33,29 +27,14 @@ function Basket() {
       <Navbar />
       {basketProducts.length > 0 ? (
         <Section>
-          {basketProducts.map((product) => (
-            <BasketItemCard
-              key={product.id}
-              id={product.id}
-              image={product.image}
-              title={product.title}
-              price={product.price}
-              amount={product.amount}
-              totalPrice={product.totalPrice}
-            />
-          ))}
+          <BasketItemCard basketProducts={basketProducts} />
           <TotalAmount>
             <ClearButton onClick={handleClearItems}>Clear All</ClearButton>
             <Total>Total Amount:&nbsp; {total} &#8378;</Total>
           </TotalAmount>
         </Section>
       ) : (
-        <WarningContainer className="warning">
-          <WarningText>
-            <WarningIcon />
-            There is nothing in your basket!
-          </WarningText>
-        </WarningContainer>
+        <WarningText />
       )}
     </>
   );
