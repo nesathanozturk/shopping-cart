@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import { Provider } from "react-redux";
@@ -8,25 +8,21 @@ import BasketItemCard from "./index";
 import { store } from "../../store/index";
 
 describe("BasketItemCard", () => {
-  const initialState = {
-    basket: {
-      basketItems: [
-        {
-          id: 1,
-          title: "Red Lipstick",
-          image:
-            "https://www.esteelauder.com/media/export/cms/products/640x600/el_sku_WWRP_640x600_0.jpg",
-          price: 20,
-          amount: 1,
-        },
-      ],
+  const basketProducts = [
+    {
+      id: 1,
+      title: "Red Lipstick",
+      image:
+        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      price: 20,
+      amount: 1,
     },
-  };
+  ];
 
   beforeEach(() => {
     render(
       <Provider store={store}>
-        <BasketItemCard basketProducts={initialState.basket.basketItems} />
+        <BasketItemCard basketProducts={basketProducts} />
       </Provider>
     );
   });
@@ -62,7 +58,7 @@ describe("BasketItemCard", () => {
 
     expect(productImage).toHaveAttribute(
       "src",
-      "https://www.esteelauder.com/media/export/cms/products/640x600/el_sku_WWRP_640x600_0.jpg"
+      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     );
   });
 
@@ -84,14 +80,13 @@ describe("BasketItemCard", () => {
     expect(removeButton).toBeInTheDocument();
   });
 
-  it("should remove the product from cart", async () => {
-    const user = userEvent.setup();
-
+  it("should remove the product from the basket", async () => {
     const removeButton = screen.getByTestId("remove-button");
 
-    await user.click(removeButton);
+    userEvent.click(removeButton);
 
-    const updatedBasketProducts = store.getState().basket.basketItems;
-    expect(updatedBasketProducts).toHaveLength(0);
+    const state = store.getState().basket.basketItems;
+
+    expect(state).toHaveLength(0);
   });
 });

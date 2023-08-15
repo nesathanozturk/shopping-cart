@@ -15,7 +15,7 @@ describe("Basket component", () => {
     id: 1,
     title: "Red Lipstick",
     image:
-      "https://www.esteelauder.com/media/export/cms/products/640x600/el_sku_WWRP_640x600_0.jpg",
+      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     price: 20,
     amount: 1,
   };
