@@ -30,7 +30,9 @@ function Basket() {
           <BasketItemCard basketProducts={basketProducts} />
           <TotalAmount>
             <ClearButton onClick={handleClearItems}>Clear All</ClearButton>
-            <Total>Total Amount:&nbsp; {total} &#8378;</Total>
+            <Total data-testid="total-amount">
+              Total Amount:&nbsp; {total} &#8378;
+            </Total>
           </TotalAmount>
         </Section>
       ) : (

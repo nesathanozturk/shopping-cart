@@ -8,7 +8,7 @@ function Navbar() {
       </div>
       <div>
         <NavLink to="/">Products</NavLink>
-        <NavLink to="/basket">
+        <NavLink data-testid="basket-button" to="/basket">
           <Basket />
         </NavLink>
       </div>

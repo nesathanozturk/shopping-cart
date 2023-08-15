@@ -32,7 +32,7 @@ function BasketItemCard({ basketProducts }) {
     };
 
     return (
-      <BasketCard key={product.id}>
+      <BasketCard data-testid="basket-card" key={product.id}>
         <div>
           <Image src={product.image} alt={product.title} />
         </div>
@@ -40,16 +40,19 @@ function BasketItemCard({ basketProducts }) {
           <Title>{product.title}</Title>
           <Price>&#x24;{product.price}</Price>
           <Buttons>
-            <Button onClick={handleAddToBasket}>
+            <Button data-testid="increase-button" onClick={handleAddToBasket}>
               <AiOutlinePlus />
             </Button>
-            <Amount>{product.amount}</Amount>
-            <Button onClick={handleDecreaseAmount}>
+            <Amount data-testid="amount">{product.amount}</Amount>
+            <Button
+              data-testid="decrease-button"
+              onClick={handleDecreaseAmount}
+            >
               <AiOutlineMinus />
             </Button>
           </Buttons>
         </Details>
-        <button onClick={handleRemoveItem}>
+        <button data-testid="remove-button" onClick={handleRemoveItem}>
           <Remove />
         </button>
       </BasketCard>
